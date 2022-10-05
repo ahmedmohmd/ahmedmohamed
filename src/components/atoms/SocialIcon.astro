@@ -1,0 +1,27 @@
+---
+interface Props {
+  icon: any;
+  background: string;
+  border: string;
+  altText?: string;
+}
+
+const { icon, background, altText, border } = Astro.props as Props;
+---
+
+<div class="icon-container relative bg-[#12181b]">
+  <span
+    class={`absolute w-full h-full ${background} rounded-xl top-0 left-0 z-0`}
+  ></span>
+  <div
+    class={`icon relative w-full h-full rounded-xl p-2 bg-[#12181b] duration-200 border-2 ${border}`}
+  >
+    <img class="w-6 h-6" src={icon} alt={altText} />
+  </div>
+</div>
+
+<style>
+  .icon-container:hover .icon {
+    transform: translate(5px, 5px);
+  }
+</style>

@@ -1,0 +1,62 @@
+---
+import Logo from "../atoms/Logo.astro";
+import SocialIcon from "../atoms/SocialIcon.astro";
+
+const socialIconsInfo = [
+  {
+    icon: "/icons/facebook.svg",
+    altText: "Facebook",
+    background: "bg-[#f1c75b]",
+    link: "https://www.facebook.com/a7m3dmohmd/",
+    border: "border-[#f1c75b]/90",
+  },
+  {
+    icon: "/icons/twitter.svg",
+    altText: "Twitter",
+    background: "bg-[#ff5e7d]",
+    link: "https://twitter.com/a7m3D_000",
+    border: "border-[#ff5e7d]/90",
+  },
+  {
+    icon: "/icons/linkedin.svg",
+    altText: "Linked In",
+    background: "bg-[#56c2e6]",
+    link: "https://www.linkedin.com/in/ahmedmohmd/",
+    border: "border-[#56c2e6]/90",
+  },
+  {
+    icon: "/icons/github.svg",
+    altText: "Github",
+    background: "bg-[#4acf84]",
+    link: "https://github.com/ahmedmohmd",
+    border: "border-[#4acf84]/90",
+  },
+];
+---
+
+<div class="bg-[#12181b] w-full sm:py-6 py-10">
+  <div
+    class="container mx-auto px-4 flex h-full flex-col justify-center gap-8 sm:gap-0 sm:flex-row sm:justify-between items-center"
+  >
+    <Logo />
+
+    <ul class="flex justify-center items-center gap-3">
+      {
+        socialIconsInfo.map(({ icon, altText, background, link, border }) => {
+          return (
+            <li>
+              <a href={link} target="_blank">
+                <SocialIcon
+                  icon={icon}
+                  altText={altText}
+                  background={background}
+                  border={border}
+                />
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</div>

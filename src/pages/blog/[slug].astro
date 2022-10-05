@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export const getStaticPaths = async () => {
+  const articles = await Astro.glob("../../data/articles/*.mdx");
+
+  return articles.map((article) => {
+    return {
+      params: { slug: article.frontmatter.slug },
+      props: { article },
+    };
+  });
+
+  //   return {
+  //     paths,
+  //   };
+};
+
+const { Content, frontmatter } = Astro.props.article;
+---
+
+<BaseLayout title={frontmatter.title}>
+  <div>
+    <Content />
+  </div>
+</BaseLayout>
