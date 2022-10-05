@@ -4,9 +4,11 @@ const articles = await Astro.glob("../../data/articles/*.mdx");
 ---
 
 <BaseLayout title="Welcome to Astro.">
-  <h1>Welcome to Astro: Titles</h1>
+  <div class="w-full grow">
+    <h1>Welcome to Astro: Titles</h1>
 
-  <div>
-    {articles.map((article: any) => <span>{article.frontmatter.title}</span>)}
+    <div>
+      {articles.map((article: any) => <span>{article.frontmatter.title}</span>)}
+    </div>
   </div>
 </BaseLayout>

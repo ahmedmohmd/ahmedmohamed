@@ -1,0 +1,29 @@
+<button
+  class="scroll-to-top-button fixed -right-14 bottom-8 duration-300 animate-bounce"
+>
+  <span class="text-3xl sm:text-4xl text-center">👆</span>
+</button>
+
+<script>
+  const scrollToTopButton = document.querySelector(
+    ".scroll-to-top-button"
+  )! as HTMLButtonElement;
+
+  window.addEventListener("scroll", () => {
+    const yScroll = window.scrollY;
+
+    if (yScroll > 100) {
+      scrollToTopButton.style.right = "20px";
+    } else {
+      scrollToTopButton.style.right = "-3.5rem";
+    }
+  });
+
+  scrollToTopButton.addEventListener("click", () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
