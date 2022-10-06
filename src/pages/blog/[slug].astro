@@ -2,6 +2,7 @@
 import H1 from "@components/atoms/H1.astro";
 import Li from "@components/atoms/Li.astro";
 import P from "@components/atoms/P.astro";
+import Pre from "@components/atoms/Pre.astro";
 import BlogLayout from "@layouts/BlogLayout.astro";
 
 export const getStaticPaths = async () => {
@@ -27,6 +28,7 @@ const {
       h1: H1,
       li: Li,
       p: P,
+      pre: Pre,
     }}
   />
 </BlogLayout>
