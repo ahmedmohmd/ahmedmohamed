@@ -1,0 +1,74 @@
+---
+interface Props {
+  title: string;
+  excerpt: string;
+  link: string;
+  cover: any;
+  tags: any;
+}
+
+const { title, excerpt, link, cover, tags } = Astro.props;
+
+const tagss = {
+  reactjs: {
+    background: "bg-blue-500",
+    color: "text-white",
+  },
+  javascript: {
+    background: "bg-yellow-500",
+    color: "text-slate-800",
+  },
+  nextjs: {
+    background: "bg-black",
+    color: "text-white",
+  },
+};
+---
+
+<div
+  class="max-w-[330px] rounded-xl shadow-md bg-[#2a2e35] hover:scale-[1.05] duration-500"
+>
+  <a href={link}>
+    <img class="rounded-t-xl w-full m-0 mb-1" src={cover} alt={title} />
+  </a>
+  <div class="p-[20px]">
+    <a href={link}>
+      <h5 class="mb-2 text-xl font-bold tracking-tight text-white truncate">
+        {title}
+      </h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-400">
+      {excerpt}
+    </p>
+    <div class="mb-3">
+      {
+        tags.map((tag) => {
+          return (
+            <span
+              class={`${tagss[tag]["background"]} ${tagss[tag]["color"]}  text-xs font-semibold mr-2 px-2.5 py-0.5 rounded `}
+            >
+              #{tag}
+            </span>
+          );
+        })
+      }
+    </div>
+    <!-- <a
+      href={link}
+      class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white rounded-xl focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+    >
+      Read more
+      <svg
+        aria-hidden="true"
+        class="ml-2 -mr-1 w-4 h-4"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        ><path
+          fill-rule="evenodd"
+          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a> -->
+  </div>
+</div>

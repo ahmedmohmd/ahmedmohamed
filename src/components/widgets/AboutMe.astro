@@ -1,8 +1,21 @@
+---
+import catImage from "@assets/images/cat.gif";
+---
+
 <div
-  id="about-me-section"
+  data-aos="fade-right"
+  data-aos-offset="100"
+  data-aos-delay="30"
+  data-aos-duration="1000"
   class="w-full text-white container mx-auto px-4 flex justify-center items-center flex-col gap-6 mt-20 sm:mt-32"
 >
-  <div class="flex justify-center items-center flex-col gap-4">
+  <div
+    data-aos="fade-right"
+    data-aos-offset="100"
+    data-aos-delay="30"
+    data-aos-duration="1000"
+    class="flex justify-center items-center flex-col gap-4"
+  >
     <span class="py-4 px-6 bg-[#ef4444] text-4xl font-bold">About Me</span>
 
     <span class="text-xl animate-pulse">who am I? 🤔</span>
@@ -19,7 +32,7 @@
 
     <span class="relative inline frontend">
       <img
-        src="/images/cat.gif"
+        src={catImage}
         class="scale-50 absolute -bottom-2 -left-14 hidden"
         alt="Cat Image"
       />
@@ -29,7 +42,7 @@
     So If you Interest in Coding Follow Me 😊
   </p>
 
-  <a href="/" class="mt-10 text-5xl animate-bounce">👇</a>
+  <a href="#articles-section" class="mt-10 text-5xl animate-bounce">👇</a>
 </div>
 
 <style>

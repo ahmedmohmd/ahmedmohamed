@@ -1,14 +1,39 @@
 ---
+import ArticleCard from "@components/core/ArticleCard.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
-const articles = await Astro.glob("../../data/articles/*.mdx");
+const articles = await Astro.glob("../../data/articles/**/*.mdx");
 ---
 
 <BaseLayout title="Welcome to Astro.">
-  <div class="w-full grow">
-    <h1>Welcome to Astro: Titles</h1>
+  <div class="w-full grow bg-[#12181b]">
+    <div class="container mx-auto px-4 mt-20">
+      <div class="flex justify-center items-center flex-col gap-4">
+        <span class="py-4 px-6 bg-[#ef4444] text-4xl font-bold">Articles</span>
 
-    <div>
-      {articles.map((article: any) => <span>{article.frontmatter.title}</span>)}
+        <span class="text-xl text-white">Awesome Articles Here! 🤓</span>
+      </div>
+
+      <div
+        class="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-6"
+      >
+        {
+          articles.map(
+            ({ frontmatter: { slug, title, excerpt, cover, tags } }) => {
+              const readyTags = tags.split(", ");
+
+              return (
+                <ArticleCard
+                  title={title}
+                  link={`/blog/${slug}`}
+                  cover={cover}
+                  excerpt={excerpt}
+                  tags={readyTags}
+                />
+              );
+            }
+          )
+        }
+      </div>
     </div>
   </div>
 </BaseLayout>
