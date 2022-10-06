@@ -19,9 +19,9 @@ const { icon, background, altText, border } = Astro.props as Props;
     <img class="w-6 h-6" src={icon} alt={altText} />
   </div>
 </div>
-<!-- 
-<style>
+
+<style is:global>
   .icon-container:hover .icon {
     transform: translate(5px, 5px);
   }
-</style> -->
+</style>
