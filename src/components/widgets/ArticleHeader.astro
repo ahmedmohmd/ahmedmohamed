@@ -9,7 +9,7 @@ const { cover, title, date } = Astro.props;
 ---
 
 <div
-  class="w-full overflow-hidden rounded-3xl max-h-96 relative flex justify-center items-center"
+  class="w-full overflow-hidden rounded-3xl relative flex justify-center items-center"
 >
   <div class="absolute w-full h-full left-0 top-0 bg-black/60 z-0"></div>
   <img class="w-full h-full object-cover" src={cover} alt={title} />
@@ -17,7 +17,7 @@ const { cover, title, date } = Astro.props;
     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center flex justify-center items-center flex-col gap-3 md:gap-5"
   >
     <h1
-      class="article-main-title text-2xl sm:text-4xl xl:text-5xl font-extrabold text-transparent bg-clip-text bg-[#f97316]"
+      class="w-full article-main-title text-2xl sm:text-4xl xl:text-5xl font-extrabold text-transparent bg-clip-text bg-[#f97316]"
     >
       {title}
     </h1>

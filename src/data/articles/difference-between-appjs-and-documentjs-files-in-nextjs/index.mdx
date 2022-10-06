@@ -1,0 +1,85 @@
+---
+title: Awesome Chrome Extensions for Every Developer
+slug: difference-between-appjs-and-documentjs-files-in-nextjs
+excerpt: We will Know the difference between _app.js and _document.js files.
+date: 2022-07-07
+cover: https://res.cloudinary.com/practicaldev/image/fetch/s--PbFRU2ZA--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nvhkumoichbmbjzrl2gl.jpg
+tags: "nextjs"
+---
+
+# Awesome Chrome Extensions for Every Developer
+
+## Introduction
+
+Chrome is considered one of the most web browsers that have many features for normal users and developers.
+So in this article, we gonna recognize to an awesome chrome extension that will ease your life as a developer.
+So let's get started....👉
+
+---
+
+## \_app.js File
+
+When You create a new Next.js Project you will notice that there is a file in the pages directory called
+\_app.js and if you open it you will see the following code:
+
+```javascript
+// Code...
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;
+```
+
+You can name the app.js file as the Root of all Components in your Next App, Which Means that Every Page that you will create in the pages directory will move to throw the MyApp Component.
+This is a beautiful Feature:
+
+- Which let you add a Global Layout Component on all Your Project Pages like Navbars and Footers...etc
+
+- You Can Also add Your Basic Meta Tags to All Pages throw Head Component.
+
+## \_document.js File
+
+This file is unknown to a lot of Next.js Developers unlike the \_app.js file which is famous, And This is due to its low use In addition You should create it to use It.
+
+\_document.js file lets you Overwrite the Basic HTML structure on Your Next App.
+Let's See How...
+
+Create an js File on Pages Directory and name is as "\_document.js" and Put the following Code in It:
+
+```javascript
+// code
+import Document, { Html, Main, Head, NextScript } from "next/document";
+
+class MyDocument extends Document {
+  render() {
+    return (
+      <Html>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+
+export default MyDocument;
+```
+
+This is the Default Structure for HTML in Your App, Now you can Edit It like add the lang Attribute to html tag and more.
+
+> ❗️Notice that
+
+- \_document.js lets you edit only html code structure which means that you can't add javascript events in it.
+- Head Component in \_document.js is Completely different from Head in \_app.js file
+
+---
+
+## Conclusion
+
+Use \_app.js file when you need to add some Global Layout or Meta Tags And use the \_document.js file only if you need to edit the basic structure of your HTML Code.

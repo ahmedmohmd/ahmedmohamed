@@ -1,5 +1,7 @@
 ---
+import BlockQuote from "@components/atoms/BlockQuote.astro";
 import H1 from "@components/atoms/H1.astro";
+import H2 from "@components/atoms/H2.astro";
 import Hr from "@components/atoms/Hr.astro";
 import Li from "@components/atoms/Li.astro";
 import P from "@components/atoms/P.astro";
@@ -26,11 +28,13 @@ const {
 <BlogLayout title={title} cover={cover} date={date}
   ><Content
     components={{
-      h1: H1,
+      h2: H2,
       li: Li,
       p: P,
       pre: Pre,
       hr: Hr,
+      blockquote: BlockQuote,
+      h1: H1,
     }}
   />
 </BlogLayout>
