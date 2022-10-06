@@ -1,9 +1,9 @@
 ---
-import A from "@components/blog/A.astro";
 import Heading from "@components/blog/Heading.astro";
 import Li from "@components/blog/Li.astro";
 import P from "@components/blog/P.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import personalImage from "@assets/images/personal-image.jpeg";
 
 export const getStaticPaths = async () => {
   const articles = await Astro.glob("../../data/articles/**/*.mdx");
@@ -31,7 +31,7 @@ const {
         <div class="absolute w-full h-full left-0 top-0 bg-black/60 z-0"></div>
         <img class="w-full h-full object-cover" src={cover} alt={title} />
         <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center flex justify-center items-center flex-col gap-5"
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center flex justify-center items-center flex-col gap-3 md:gap-5"
         >
           <h1
             class="article-main-title text-2xl sm:text-4xl xl:text-5xl font-extrabold text-transparent bg-clip-text bg-[#f97316]"
@@ -49,18 +49,16 @@ const {
         </div>
       </div>
       <div
-        class="rounded-2xl w-full bg-[#2a2e35] p-3 flex justify-start items-center gap-3"
+        class="rounded-2xl w-full bg-[#2a2e35] p-3 flex justify-start items-center gap-3 mt-2"
       >
-        <div class="rounded-full overflow-hidden w-12 h-12">
-          <img
-            class="w-full h-full object-cover"
-            src="https://avatars.githubusercontent.com/u/78971171?v=4"
-            alt="Ahmed Mohamed"
-          />
+        <div
+          class="rounded-full overflow-hidden w-12 h-12 border-2 border-orange-500"
+        >
+          <img class="w-full h-full" src={personalImage} alt="Ahmed Mohamed" />
         </div>
         <div>
-          <h6 class="text-[#f97316]">Ahmed Mohamed</h6>
-          <p class="text-xs md:text-sm !font-extralight">
+          <a href="#" class="text-[#f97316]">Ahmed Mohamed</a>
+          <p class="text-xs md:text-sm !font-extralight text-slate-300">
             Frontend Web Developer.
           </p>
         </div>
