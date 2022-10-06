@@ -1,0 +1,25 @@
+---
+import ArticleHeader from "@components/widgets/ArticleHeader.astro";
+import Author from "@components/widgets/Author.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  cover: string;
+  date: string;
+}
+
+const { title, cover, date } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <div class="grow w-full bg-[#12181b] text-white text-lg">
+    <div class="container mx-auto px-4 leading-[1.7] mt-8">
+      <ArticleHeader title={title} cover={cover} date={date} />
+      <Author />
+      <div class="pl-0 sm:pl-2 lg:pl-4">
+        <slot />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

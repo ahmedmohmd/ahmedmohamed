@@ -1,9 +1,8 @@
 ---
-import Heading from "@components/blog/Heading.astro";
-import Li from "@components/blog/Li.astro";
-import P from "@components/blog/P.astro";
-import BaseLayout from "@layouts/BaseLayout.astro";
-import personalImage from "@assets/images/personal-image.jpeg";
+import H1 from "@components/atoms/H1.astro";
+import Li from "@components/atoms/Li.astro";
+import P from "@components/atoms/P.astro";
+import BlogLayout from "@layouts/BlogLayout.astro";
 
 export const getStaticPaths = async () => {
   const articles = await Astro.glob("../../data/articles/**/*.mdx");
@@ -22,59 +21,15 @@ const {
 } = Astro.props.article;
 ---
 
-<BaseLayout title={title}>
-  <div class="grow w-full bg-[#12181b] text-white text-lg">
-    <div class="container mx-auto px-4 leading-[1.7] mt-8">
-      <div
-        class="w-full overflow-hidden rounded-3xl max-h-96 relative flex justify-center items-center"
-      >
-        <div class="absolute w-full h-full left-0 top-0 bg-black/60 z-0"></div>
-        <img class="w-full h-full object-cover" src={cover} alt={title} />
-        <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center flex justify-center items-center flex-col gap-3 md:gap-5"
-        >
-          <h1
-            class="article-main-title text-2xl sm:text-4xl xl:text-5xl font-extrabold text-transparent bg-clip-text bg-[#f97316]"
-          >
-            {title}
-          </h1>
-          <div class="w-1/4 md:w-1/6 bg-slate-400 h-[3px] rounded-3xl"></div>
-          <span class="text-sm sm:text-lg"
-            >{
-              new Date(date).toLocaleDateString("en-US", {
-                dateStyle: "medium",
-              })
-            }</span
-          >
-        </div>
-      </div>
-      <div
-        class="rounded-2xl w-full bg-[#2a2e35] p-3 flex justify-start items-center gap-3 mt-2"
-      >
-        <div
-          class="rounded-full overflow-hidden w-12 h-12 border-2 border-orange-500"
-        >
-          <img class="w-full h-full" src={personalImage} alt="Ahmed Mohamed" />
-        </div>
-        <div>
-          <a href="#" class="text-[#f97316]">Ahmed Mohamed</a>
-          <p class="text-xs md:text-sm !font-extralight text-slate-300">
-            Frontend Web Developer.
-          </p>
-        </div>
-      </div>
-      <div class="pl-0 sm:pl-2 lg:pl-4">
-        <Content
-          components={{
-            h1: Heading,
-            li: Li,
-            p: P,
-          }}
-        />
-      </div>
-    </div>
-  </div>
-</BaseLayout>
+<BlogLayout title={title} cover={cover} date={date}
+  ><Content
+    components={{
+      h1: H1,
+      li: Li,
+      p: P,
+    }}
+  />
+</BlogLayout>
 
 <style>
   .article-main-title {

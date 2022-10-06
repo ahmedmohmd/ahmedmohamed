@@ -1,0 +1,45 @@
+---
+interface Props {
+  animate: boolean;
+  primaryHeading: string;
+  secondaryHeading: string;
+  backgroundColor: string;
+  animateName?: string;
+}
+
+const {
+  animate,
+  primaryHeading,
+  secondaryHeading,
+  backgroundColor,
+  animateName,
+} = Astro.props;
+---
+
+{
+  animate ? (
+    <div
+      data-aos="fade-right"
+      data-aos-offset="100"
+      data-aos-delay="30"
+      data-aos-duration="1000"
+      class="flex justify-center items-center flex-col gap-4 text-white"
+    >
+      <span class={`py-4 px-6 ${backgroundColor} text-4xl font-bold`}>
+        {primaryHeading}
+      </span>
+      <span class={`text-xl animate-pulse ${animateName ? animateName : null}`}>
+        {secondaryHeading}
+      </span>
+    </div>
+  ) : (
+    <div class="flex justify-center items-center flex-col gap-4 text-white">
+      <span class={`py-4 px-6 ${backgroundColor} text-4xl font-bold`}>
+        {primaryHeading}
+      </span>
+      <span class={`text-xl animate-pulse ${animateName ? animateName : null}`}>
+        {secondaryHeading}
+      </span>
+    </div>
+  )
+}

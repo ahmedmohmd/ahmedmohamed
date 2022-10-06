@@ -1,5 +1,6 @@
 ---
 import catImage from "@assets/images/cat.gif";
+import SectionHeading from "./SectionHeading.astro";
 ---
 
 <div
@@ -9,17 +10,13 @@ import catImage from "@assets/images/cat.gif";
   data-aos-duration="1000"
   class="w-full text-white container mx-auto px-4 flex justify-center items-center flex-col gap-6 mt-20 sm:mt-32"
 >
-  <div
-    data-aos="fade-right"
-    data-aos-offset="100"
-    data-aos-delay="30"
-    data-aos-duration="1000"
-    class="flex justify-center items-center flex-col gap-4"
-  >
-    <span class="py-4 px-6 bg-[#ef4444] text-4xl font-bold">About Me</span>
-
-    <span class="text-xl animate-pulse">who am I? 🤔</span>
-  </div>
+  <SectionHeading
+    animate={true}
+    primaryHeading="About Me"
+    secondaryHeading="who am I? 🤔"
+    backgroundColor="bg-[#ef4444]"
+    animateName={"animate-pulse"}
+  />
 
   <p
     class="text-center text-lg"
