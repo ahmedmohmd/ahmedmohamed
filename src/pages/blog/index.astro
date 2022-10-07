@@ -6,7 +6,10 @@ const articles = await Astro.glob("../../data/articles/**/*.mdx");
 const nonDraftArticles = articles.filter((post) => !post.frontmatter.draft);
 ---
 
-<BaseLayout title="Welcome to Astro.">
+<BaseLayout
+  title="Welcome to Astro."
+  description={"Nice Blog Posts and Articles that Increase Your Knowladge in Web Development."}
+>
   <div class="w-full grow bg-[#12181b]">
     <div class="container mx-auto px-4 mt-20">
       <SectionHeading

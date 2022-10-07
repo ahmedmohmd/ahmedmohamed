@@ -6,22 +6,21 @@ import tabIcon from "../../public/images/logo.png";
 
 export interface Props {
   title: string;
+  description: string;
 }
 
-const { title = "Ahmed Mohamed" } = Astro.props as Props;
+const { title, description } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
     <meta name="theme-color" content="#2a2e35" />
-    <meta
-      name="description"
-      content="Nice Projects, Awesome Articles and More in My Offecial Website, So Follow Me Now."
-    />
+    <meta name="description" content={description} />
     <link rel="icon" href={tabIcon} />
+    <link rel="apple-touch-icon" href={tabIcon} />
 
     <title>{title}</title>
 

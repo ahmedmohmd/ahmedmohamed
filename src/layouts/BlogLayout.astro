@@ -7,12 +7,13 @@ interface Props {
   title: string;
   cover: string;
   date: string;
+  description: string;
 }
 
-const { title, cover, date } = Astro.props;
+const { title, cover, date, description } = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
   <div class="grow w-full bg-[#12181b] text-white text-lg">
     <div class="container mx-auto px-4 leading-[1.7] mt-8">
       <ArticleHeader title={title} cover={cover} date={date} />

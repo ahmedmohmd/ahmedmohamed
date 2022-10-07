@@ -14,7 +14,7 @@ const { icon, background, altText, border } = Astro.props as Props;
     class={`absolute w-full h-full ${background} rounded-xl top-0 left-0 z-0`}
   ></span>
   <div
-    class={`icon relative w-full h-full rounded-xl p-2 bg-[#12181b] duration-200 border-2 ${border}`}
+    class={`icon relative w-full h-full rounded-xl p-2 bg-[#12181b] duration-200 border-2 lg:border-[3px] ${border}`}
   >
     <img class="w-6 h-6" src={icon} alt={altText} />
   </div>
