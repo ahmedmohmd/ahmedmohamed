@@ -5,6 +5,7 @@ interface Props {
   secondaryHeading: string;
   backgroundColor: string;
   animateName?: string;
+  animationName?: string;
 }
 
 const {
@@ -13,13 +14,14 @@ const {
   secondaryHeading,
   backgroundColor,
   animateName,
+  animationName,
 } = Astro.props;
 ---
 
 {
   animate ? (
     <div
-      data-aos="fade-right"
+      data-aos={animationName ? animationName : "fade-right"}
       data-aos-offset="100"
       data-aos-delay="30"
       data-aos-duration="1000"

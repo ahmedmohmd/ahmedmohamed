@@ -4,10 +4,6 @@ import SectionHeading from "./SectionHeading.astro";
 ---
 
 <div
-  data-aos="fade-right"
-  data-aos-offset="100"
-  data-aos-delay="30"
-  data-aos-duration="1000"
   class="w-full text-white container mx-auto px-4 flex justify-center items-center flex-col gap-6 mt-20 sm:mt-32"
 >
   <SectionHeading
@@ -15,7 +11,7 @@ import SectionHeading from "./SectionHeading.astro";
     primaryHeading="About Me"
     secondaryHeading="who am I? 🤔"
     backgroundColor="bg-[#ef4444]"
-    animateName={"animate-pulse"}
+    animateName="animate-pulse"
   />
 
   <p
@@ -39,7 +35,14 @@ import SectionHeading from "./SectionHeading.astro";
     So If you Interest in Coding Follow Me 😊
   </p>
 
-  <a href="#articles-section" class="mt-10 text-5xl animate-bounce">👇</a>
+  <a
+    data-aos="fade-up"
+    data-aos-offset="100"
+    data-aos-delay="150"
+    data-aos-duration="1000"
+    href="#articles-section"
+    class="mt-10 text-5xl animate-bounce">👇</a
+  >
 </div>
 
 <style>
