@@ -1,0 +1,30 @@
+---
+import A from "./A.astro";
+
+interface Props {
+  href: string;
+  topic: string;
+}
+
+const { href, topic } = Astro.props;
+---
+
+<div class="flex justify-start items-center gap-2 my-3">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="3"
+    stroke="#e36a17"
+    class="w-6 h-6"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+  </svg>
+
+  <A href={href} target="_self"
+    ><span class="text-lg md:text-2xl">{topic}</span>
+  </A>
+</div>

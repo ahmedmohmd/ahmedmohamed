@@ -8,7 +8,7 @@ export interface Props {
   title: string;
 }
 
-const { title } = Astro.props as Props;
+const { title = "Ahmed Mohamed" } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -39,11 +39,10 @@ const { title } = Astro.props as Props;
     </main>
 
     <style is:global>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&family=Silkscreen:wght@400;700&display=swap");
       html {
         scroll-behavior: smooth;
       }
-
-      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&family=Silkscreen:wght@400;700&display=swap");
 
       * {
         font-family: "Lexend";
@@ -52,6 +51,14 @@ const { title } = Astro.props as Props;
       code,
       pre {
         overflow: auto;
+      }
+
+      button {
+        outline: none;
+      }
+
+      button::selection {
+        background: transparent;
       }
     </style>
   </body>

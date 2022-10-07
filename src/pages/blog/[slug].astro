@@ -1,17 +1,17 @@
 ---
-import BlockQuote from "@components/atoms/BlockQuote.astro";
-import H1 from "@components/atoms/H1.astro";
-import H2 from "@components/atoms/H2.astro";
-import Hr from "@components/atoms/Hr.astro";
-import Li from "@components/atoms/Li.astro";
-import P from "@components/atoms/P.astro";
-import Pre from "@components/atoms/Pre.astro";
+import BlockQuote from "@components/markdown/BlockQuote.astro";
+import H1 from "@components/markdown/H1.astro";
+import H2 from "@components/markdown/H2.astro";
+import Hr from "@components/markdown/Hr.astro";
+import P from "@components/markdown/P.astro";
+import Pre from "@components/markdown/Pre.astro";
 import BlogLayout from "@layouts/BlogLayout.astro";
 
 export const getStaticPaths = async () => {
   const articles = await Astro.glob("../../data/articles/**/*.mdx");
+  const nonDraftArticles = articles.filter((post) => !post.frontmatter.draft);
 
-  return articles.map((article) => {
+  return nonDraftArticles.map((article) => {
     return {
       params: { slug: article.frontmatter.slug },
       props: { article },
@@ -29,7 +29,6 @@ const {
   ><Content
     components={{
       h2: H2,
-      li: Li,
       p: P,
       pre: Pre,
       hr: Hr,

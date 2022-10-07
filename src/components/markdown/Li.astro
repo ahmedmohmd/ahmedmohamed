@@ -1,0 +1,14 @@
+---
+interface Props {
+  textColor: string;
+  content: string;
+  iconColor: string;
+}
+
+const { content, textColor, iconColor } = Astro.props;
+---
+
+<li class="flex justify-start items-center gap-2">
+  <span class={`w-2 h-2 ${textColor} ${iconColor} rounded-full`}></span>
+  <span class="text-base">{content}</span>
+</li>

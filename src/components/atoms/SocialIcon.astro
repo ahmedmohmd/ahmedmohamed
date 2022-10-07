@@ -21,6 +21,14 @@ const { icon, background, altText, border } = Astro.props as Props;
 </div>
 
 <style is:global>
+  .icon-container {
+    outline: none;
+  }
+
+  .icon-container::selection {
+    background: transparent;
+  }
+
   .icon-container:hover .icon {
     transform: translate(5px, 5px);
   }

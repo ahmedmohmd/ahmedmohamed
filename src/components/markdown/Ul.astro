@@ -1,0 +1,19 @@
+---
+import Li from "./Li.astro";
+
+interface Props {
+  items: string[];
+  textColor: string;
+  iconsColor: string;
+}
+
+const { items, textColor, iconsColor } = Astro.props;
+---
+
+<ul class="ml-2 my-2 flex justify-center items-start gap-2 flex-col">
+  {
+    items.map((item) => {
+      return <Li content={item} textColor={textColor} iconColor={iconsColor} />;
+    })
+  }
+</ul>

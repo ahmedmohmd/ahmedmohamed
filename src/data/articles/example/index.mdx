@@ -5,9 +5,10 @@ excerpt: In This Article we will discus what is React.js? and How wen can use it
 date: 2022-06-20
 cover: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDqQ_ggMqsdPl7PyGbSufT7bdf0tU57kJA2w&usqp=CAU
 tags: "reactjs, javascript, nextjs"
+draft: true
 ---
 
-import A from "@components/atoms/A.astro";
+import A from "@components/markdown/A.astro";
 
 # Introduction
 
@@ -19,11 +20,13 @@ Hello Gays, in this article we will descuss what is react js so let's get starte
 ---
 
 import cover from "./img/cover.jpg";
-import Image from "@components/atoms/Image.astro";
+import Image from "@components/markdown/Image.astro";
 
 # What is React JS
 
 copy the following Code
+
+import Note from "@components/markdown/Note.astro";
 
 ```javascript
 // My Vaariable
@@ -41,10 +44,13 @@ You Can Put you own message
     "https://res.cloudinary.com/practicaldev/image/fetch/s--Vev_Bizg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t3efqjgm900josj0rxnl.jpg"
   }
 />
+<Image
+  src={
+    "https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"
+  }
+/>
 
-```bash
-yarn add axios
-```
-
-So now we installed react in out machien.
-Next put the following Code in yout terminal
+<Note>
+  So now we installed react in out machien. Next put the following Code in yout
+  terminal
+</Note>

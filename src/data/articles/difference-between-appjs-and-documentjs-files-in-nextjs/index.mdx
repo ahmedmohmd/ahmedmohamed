@@ -1,5 +1,5 @@
 ---
-title: Awesome Chrome Extensions for Every Developer
+title: Difference Between appjs and documentjs files in Next.js
 slug: difference-between-appjs-and-documentjs-files-in-nextjs
 excerpt: We will Know the difference between _app.js and _document.js files.
 date: 2022-07-07
@@ -7,13 +7,29 @@ cover: https://res.cloudinary.com/practicaldev/image/fetch/s--PbFRU2ZA--/c_imagg
 tags: "nextjs"
 ---
 
-# Awesome Chrome Extensions for Every Developer
+{/* Components */}
+import Note from "@components/markdown/Note.astro"
+import TopicLink from "@components/markdown/TopicLink.astro"
+import Ul from "@components/markdown/Ul.astro"
+import A from "@components/markdown/A.astro"
+
+{/* Content */}
+
+# Difference Between appjs and documentjs files in Next.js
 
 ## Introduction
 
-Chrome is considered one of the most web browsers that have many features for normal users and developers.
-So in this article, we gonna recognize to an awesome chrome extension that will ease your life as a developer.
-So let's get started....👉
+Next.js is a Framework which build above React.js, Next.js Team called it The React Framework for Production, Which let you optimize your React Applications throw [SSG](https://nextjs.org/docs/basic-features/pages#static-generation-recommended), [ISR](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) and [SSR](https://nextjs.org/docs/basic-features/pages#server-side-rendering) Strategies.
+
+In this Article we will know wthat is Difference between <A href="https://nextjs.org/docs/advanced-features/custom-app" >\_app.js</A> and <A href="https://nextjs.org/docs/advanced-features/custom-document" >\_document.js</A> files in Next.js.
+So let's get started... 👉
+
+Contents:
+
+<TopicLink href="#introduction" topic="Conclusion" />
+<TopicLink href="#_app.js" topic="App.js File" />
+<TopicLink href="#_document.js" topic="Document.js File" />
+<TopicLink href="#Conclusion.js" topic="Conclusion" />
 
 ---
 
@@ -30,6 +46,7 @@ import type { AppProps } from "next/app";
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
+aboutme;
 
 export default MyApp;
 ```
@@ -73,10 +90,17 @@ export default MyDocument;
 
 This is the Default Structure for HTML in Your App, Now you can Edit It like add the lang Attribute to html tag and more.
 
-> ❗️Notice that
-
-- \_document.js lets you edit only html code structure which means that you can't add javascript events in it.
-- Head Component in \_document.js is Completely different from Head in \_app.js file
+<Note>
+  <span class="text-xl font-semibold">❗️Notice that</span>
+  <Ul
+    items={[
+      "_document.js lets you edit only html code structure which means that you can't add javascript events in it.",
+      "Head Component in _document.js is Completely different from Head in _app.js file",
+    ]}
+    textColor={"text-black"}
+    iconsColor={"bg-black"}
+  />
+</Note>
 
 ---
 

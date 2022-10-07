@@ -3,6 +3,7 @@ import ArticleCard from "@components/core/ArticleCard.astro";
 import SectionHeading from "@components/widgets/SectionHeading.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 const articles = await Astro.glob("../../data/articles/**/*.mdx");
+const nonDraftArticles = articles.filter((post) => !post.frontmatter.draft);
 ---
 
 <BaseLayout title="Welcome to Astro.">
@@ -19,7 +20,7 @@ const articles = await Astro.glob("../../data/articles/**/*.mdx");
         class="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-6"
       >
         {
-          articles.map(
+          nonDraftArticles.map(
             ({ frontmatter: { slug, title, excerpt, cover, tags } }) => {
               const readyTags = tags.split(", ");
 
