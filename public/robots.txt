@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://a7m3d.vercel.app/sitemap-index.xml
