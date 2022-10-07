@@ -6,6 +6,7 @@ interface Props {
   backgroundColor: string;
   animateName?: string;
   animationName?: string;
+  animationDuration?: number;
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   backgroundColor,
   animateName,
   animationName,
+  animationDuration,
 } = Astro.props;
 ---
 
@@ -23,7 +25,7 @@ const {
     <div
       data-aos={animationName ? animationName : "fade-right"}
       data-aos-offset="100"
-      data-aos-delay="30"
+      data-aos-delay={`${animationDuration ? animationDuration : 30}`}
       data-aos-duration="1000"
       class="flex justify-center items-center flex-col gap-4 text-white"
     >

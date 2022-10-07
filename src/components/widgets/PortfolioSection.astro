@@ -1,0 +1,42 @@
+---
+import lampe from "@assets/images/lampe.gif";
+import SectionHeading from "./SectionHeading.astro";
+---
+
+<div
+  class="w-full text-white container mx-auto px-4 flex justify-center items-center flex-col gap-6 mt-20 sm:mt-32"
+>
+  <SectionHeading
+    animate={true}
+    primaryHeading="Portfolio"
+    secondaryHeading="Awesome Projects that I made 📦"
+    backgroundColor="bg-[#45bd7a]"
+    animateName="animate-pulse"
+    animationDuration={200}
+  />
+
+  <p
+    class="text-center text-lg"
+    data-aos="fade-right"
+    data-aos-offset="100"
+    data-aos-delay="200"
+    data-aos-duration="1000"
+  >
+    Awesome <span class="relative inline projects">
+      <img
+        src={lampe}
+        class="scale-[2] absolute bottom-16 left-0 hidden"
+        alt="Smoker Person"
+      />
+      <a href="#" class="text-[#45bd7a] font-bold">Projects</a>
+    </span> with Various Web Technologies Like Typescript, React, Next and More.
+  </p>
+</div>
+
+<style>
+  @media (min-width: 1024px) {
+    .projects:hover > img {
+      display: inline;
+    }
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import catImage from "@assets/images/cat.gif";
 import SectionHeading from "./SectionHeading.astro";
+import smokerPerson from "@assets/images/smoker-person.gif";
 ---
 
 <div
@@ -21,12 +22,18 @@ import SectionHeading from "./SectionHeading.astro";
     data-aos-delay="30"
     data-aos-duration="1000"
   >
-    My name is <a href="#" class="text-[#ff5e7d]">Ahmed</a>, {" "} I am a
-
+    My name is <span class="relative inline frontend">
+      <img
+        src={smokerPerson}
+        class="scale-[2] absolute bottom-16 left-0 hidden"
+        alt="Smoker Person"
+      />
+      <span class="text-[#ff5e7d] font-bold">Ahmed</span>
+    </span>, {" "} I am a
     <span class="relative inline frontend">
       <img
         src={catImage}
-        class="scale-50 absolute -bottom-2 -left-14 hidden"
+        class="scale-75 absolute bottom-2 -left-14 hidden"
         alt="Programmer Cat"
       />
       <span class="text-[#f1c75b] font-bold">Frontend Web Developer</span>
