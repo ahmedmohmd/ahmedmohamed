@@ -1,11 +1,11 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import sitemap from "@astrojs/sitemap";
+
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx(), sitemap()],
+  integrations: [tailwind(), mdx()],
   markdown: {
     drafts: true,
     shikiConfig: {
@@ -20,6 +20,4 @@ export default defineConfig({
       wrap: true,
     },
   },
-  site: "https://a7m3d.vercel.app/",
-  integrations: [sitemap()],
 });
