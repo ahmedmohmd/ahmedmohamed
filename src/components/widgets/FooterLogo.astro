@@ -1,0 +1,15 @@
+---
+import Logo from "@components/atoms/Logo.astro";
+
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+---
+
+<Fragment>
+  <Logo width={"w-20 sm:w-16"} height={"h-20 sm:h-16"} />
+  <div class="sm:mt-5 text-white">
+    <span>© {currentYear}</span>
+    {" "}
+    <a href="#" class="text-orange-400">Ahmed Mohamed</a>
+  </div>
+</Fragment>

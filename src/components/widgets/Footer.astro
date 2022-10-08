@@ -3,9 +3,9 @@ import facebook from "@assets/icons/facebook.svg";
 import twitter from "@assets/icons/twitter.svg";
 import linkedin from "@assets/icons/linkedin.svg";
 import github from "@assets/icons/github.svg";
-import Logo from "../atoms/Logo.astro";
 import SocialIcon from "../atoms/SocialIcon.astro";
 import { getFooterSocialIcons } from "@utils/tokens";
+import FooterLogo from "./FooterLogo.astro";
 
 const socialIconsInfo = getFooterSocialIcons([
   facebook,
@@ -19,7 +19,9 @@ const socialIconsInfo = getFooterSocialIcons([
   <div
     class="container mx-auto px-4 flex h-full flex-col justify-center gap-6 sm:gap-0 sm:flex-row sm:justify-between items-center"
   >
-    <Logo width={"w-20 sm:w-16"} height={"h-20 sm:h-16"} />
+    <div class="flex justify-center items-center gap-2 flex-col sm:flex-row">
+      <FooterLogo />
+    </div>
     <ul class="flex justify-center items-center gap-3">
       {
         socialIconsInfo.map(({ icon, altText, background, link, border }) => {
