@@ -10,7 +10,7 @@ interface Props {
 const { items, textColor, iconsColor } = Astro.props;
 ---
 
-<ul class="ml-2 my-2 flex justify-center items-start gap-2 flex-col">
+<ul class="ml-4 my-2 flex justify-center items-start gap-2 flex-col">
   {
     items.map((item) => {
       return <Li content={item} textColor={textColor} iconColor={iconsColor} />;
