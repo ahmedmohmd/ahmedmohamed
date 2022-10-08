@@ -1,0 +1,12 @@
+---
+interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+---
+
+<div class="w-full flex justify-center items-center">
+  <iframe class="w-full my-3 sm:w-[60%] aspect-video rounded-2xl" src={src}>
+  </iframe>
+</div>
