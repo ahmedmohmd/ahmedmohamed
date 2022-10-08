@@ -5,38 +5,18 @@ interface Props {
   date: string;
 }
 
-const { cover, title, date } = Astro.props;
+const { cover, title } = Astro.props;
 ---
 
 <div
   class="w-full overflow-hidden rounded-3xl relative flex justify-center items-center"
 >
-  <div class="absolute w-full h-full left-0 top-0 bg-black/60 z-0"></div>
+  <div class="absolute w-full h-full left-0 top-0 bg-slate-800/20 z-0"></div>
   <img
     class="w-full h-full md:h-[375px] lg:h-[500px] xl:h-[600px] object-cover"
     src={cover}
     alt={title}
   />
-  <div
-    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center flex justify-center items-center flex-col gap-3 md:gap-5"
-  >
-    <h1
-      class="hidden md:block w-full article-main-title text-2xl sm:text-4xl xl:text-5xl font-extrabold text-transparent bg-clip-text bg-[#f97316]"
-    >
-      {title}
-    </h1>
-    <div
-      class="hidden md:block w-1/4 md:w-1/6 bg-orange-400 h-[3px] rounded-3xl"
-    >
-    </div>
-    <span class="text-sm sm:text-lg"
-      >{
-        new Date(date).toLocaleDateString("en-US", {
-          dateStyle: "medium",
-        })
-      }</span
-    >
-  </div>
 </div>
 
 <style is:global>

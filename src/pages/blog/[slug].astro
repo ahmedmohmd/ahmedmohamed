@@ -25,17 +25,19 @@ const {
 } = Astro.props.article;
 ---
 
-<BlogLayout title={title} cover={cover} date={date} description={excerpt}
-  ><Content
-    components={{
-      h2: H2,
-      p: P,
-      pre: Pre,
-      hr: Hr,
-      blockquote: BlockQuote,
-      h1: H1,
-    }}
-  />
+<BlogLayout title={title} cover={cover} date={date} description={excerpt}>
+  <div class="mb-5 sm:mb-20">
+    <Content
+      components={{
+        h2: H2,
+        p: P,
+        pre: Pre,
+        hr: Hr,
+        blockquote: BlockQuote,
+        h1: H1,
+      }}
+    />
+  </div>
 </BlogLayout>
 
 <style>

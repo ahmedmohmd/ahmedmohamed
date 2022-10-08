@@ -1,5 +1,7 @@
 ---
+import H1 from "@components/markdown/H1.astro";
 import ArticleHeader from "@components/widgets/ArticleHeader.astro";
+import ArticleHeading from "@components/widgets/ArticleHeading.astro";
 import Author from "@components/widgets/Author.astro";
 import BaseLayout from "./BaseLayout.astro";
 
@@ -18,9 +20,8 @@ const { title, cover, date, description } = Astro.props;
     <div class="container mx-auto px-4 leading-[1.7] mt-8">
       <ArticleHeader title={title} cover={cover} date={date} />
       <Author />
-      <div class="pl-0 sm:pl-2 lg:pl-4">
-        <slot />
-      </div>
+      <ArticleHeading title={title} date={date} />
+      <slot />
     </div>
   </div>
 </BaseLayout>

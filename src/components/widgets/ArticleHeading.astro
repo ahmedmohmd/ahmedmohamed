@@ -1,0 +1,19 @@
+---
+import H1 from "@components/markdown/H1.astro";
+
+interface Props {
+  title: string;
+  date: string;
+}
+
+const { title, date } = Astro.props;
+
+const formatedDate = new Date(date).toLocaleDateString("en-US", {
+  dateStyle: "medium",
+});
+---
+
+<div class="mb-10">
+  <H1>{title}</H1>
+  <time class="text-slate-300">Published at {formatedDate}</time>
+</div>
