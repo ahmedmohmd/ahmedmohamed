@@ -1,0 +1,42 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import writingImage from "@assets/images/writing.gif";
+---
+
+<div
+  id="articles-section"
+  class="w-full text-white container mx-auto px-4 flex justify-center items-center flex-col gap-6 my-20 sm:mt-32"
+>
+  <SectionHeading
+    animate={true}
+    primaryHeading="Skills"
+    secondaryHeading="Know more about Me and My Skills ✍️"
+    backgroundColor="bg-[#50b1d2]"
+    animateName={"animate-pulse"}
+  />
+  <p
+    class="text-center text-lg"
+    data-aos="fade-right"
+    data-aos-offset="100"
+    data-aos-delay="30"
+    data-aos-duration="1000"
+  >
+    Here you can find My <span class="relative inline articles">
+      <img
+        src={writingImage}
+        class="scale-50 absolute -bottom-8 right-[200px] hidden"
+        alt="Death Note: Light Yagami"
+      />
+      <a href="/blog" class="text-[#50b1d2] font-bold">Skills</a>
+      and Technologies that I can Use.
+    </span>
+  </p>
+</div>
+
+<style>
+  @media (min-width: 1024px) {
+    .articles:hover > img {
+      display: inline;
+    }
+  }
+</style>
