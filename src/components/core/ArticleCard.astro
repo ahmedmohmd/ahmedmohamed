@@ -1,4 +1,6 @@
 ---
+import { getTags } from "@utils/tokens";
+
 interface Props {
   title: string;
   excerpt: string;
@@ -9,20 +11,7 @@ interface Props {
 
 const { title, excerpt, link, cover, tags } = Astro.props;
 
-const tagss = {
-  reactjs: {
-    background: "bg-blue-500",
-    color: "text-white",
-  },
-  javascript: {
-    background: "bg-yellow-500",
-    color: "text-slate-800",
-  },
-  nextjs: {
-    background: "bg-black",
-    color: "text-white",
-  },
-};
+const tagss = getTags();
 ---
 
 <div

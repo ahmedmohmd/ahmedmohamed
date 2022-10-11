@@ -106,4 +106,21 @@ const getSkills = () => {
   ];
 };
 
-export { getFooterSocialIcons, getSkills };
+const getTags = () => {
+  return {
+    reactjs: {
+      background: "bg-blue-500",
+      color: "text-white",
+    },
+    javascript: {
+      background: "bg-yellow-500",
+      color: "text-slate-800",
+    },
+    nextjs: {
+      background: "bg-black",
+      color: "text-white",
+    },
+  };
+};
+
+export { getFooterSocialIcons, getSkills, getTags };
