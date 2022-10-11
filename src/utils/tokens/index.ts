@@ -31,4 +31,79 @@ const getFooterSocialIcons = (icons: [string, string, string, string]) => {
   ];
 };
 
-export { getFooterSocialIcons };
+const getSkills = () => {
+  return [
+    {
+      skillName: "Git",
+      progress: 40,
+      width: "w-[40%]",
+    },
+    {
+      skillName: "HTML",
+      progress: 90,
+      width: "w-[90%]",
+    },
+    {
+      skillName: "CSS",
+      progress: 80,
+      width: "w-[80%]",
+    },
+    {
+      skillName: "JavaScript",
+      progress: 80,
+      width: "w-[80%]",
+    },
+    {
+      skillName: "Pug JS",
+      progress: 70,
+      width: "w-[70%]",
+    },
+    {
+      skillName: "Sass",
+      progress: 80,
+      width: "w-[70%]",
+    },
+    {
+      skillName: "Tailwind",
+      progress: 80,
+      width: "w-[80%]",
+    },
+    {
+      skillName: "React JS",
+      progress: 90,
+      width: "w-[90%]",
+    },
+    {
+      skillName: "Next JS",
+      progress: 90,
+      width: "w-[90%]",
+    },
+    {
+      skillName: "TypeScript",
+      progress: 80,
+      width: "w-[80%]",
+    },
+    {
+      skillName: "Astro",
+      progress: 80,
+      width: "w-[80%]",
+    },
+    {
+      skillName: "Jest",
+      progress: 80,
+      width: "w-[80%]",
+    },
+    {
+      skillName: "React Testing Library",
+      progress: 70,
+      width: "w-[70%]",
+    },
+    {
+      skillName: "Cypress",
+      progress: 65,
+      width: "w-[65%]",
+    },
+  ];
+};
+
+export { getFooterSocialIcons, getSkills };

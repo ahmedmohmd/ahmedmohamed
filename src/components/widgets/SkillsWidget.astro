@@ -1,0 +1,32 @@
+---
+interface Props {
+  icon: any;
+  name: string;
+  iconAltText: string;
+}
+
+const { icon, name, iconAltText } = Astro.props;
+---
+
+<div class="relative flex pb-20 sm:items-center">
+  <div class="absolute inset-0 flex items-center justify-center w-6 h-full">
+    <div class="w-1 h-full bg-gray-200 pointer-events-none"></div>
+  </div>
+  <div
+    class="border-4 border-white relative z-10 inline-flex items-center self-start justify-center flex-shrink-0 w-6 h-6 mt-10 text-sm font-medium text-white bg-orange-500 rounded-full sm:mt-9 title-font"
+  >
+  </div>
+  <div class="flex flex-col items-start flex-grow pl-6 md:pl-8 sm:flex-row">
+    <div
+      class="inline-flex items-center justify-center flex-shrink-0 w-24 h-24 text-orange-500 bg-orange-100 rounded-full"
+    >
+      <img src={icon} alt={iconAltText} class="w-14 h-14" />
+    </div>
+    <div class="flex-grow mt-6 sm:pl-6 sm:mt-0">
+      <h2 class="mb-1 text-xl font-semibold title-font text-white">
+        {name}
+      </h2>
+      <slot />
+    </div>
+  </div>
+</div>
