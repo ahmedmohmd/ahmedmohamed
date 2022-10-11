@@ -1,6 +1,7 @@
 ---
 import SectionHeading from "./SectionHeading.astro";
 import footballPlayer from "@assets/images/football-player.gif";
+import A from "@components/markdown/A.astro";
 ---
 
 <div
@@ -11,7 +12,7 @@ import footballPlayer from "@assets/images/football-player.gif";
     animate={true}
     primaryHeading="Skills"
     secondaryHeading="Know more about Me and My Skills ✍️"
-    backgroundColor="bg-[#50b1d2]"
+    backgroundColor="bg-cyan-500"
     animateName={"animate-pulse"}
   />
   <p
@@ -24,10 +25,15 @@ import footballPlayer from "@assets/images/football-player.gif";
     Here you can find My <span class="relative inline articles">
       <img
         src={footballPlayer}
-        class="scale-[0.75] absolute -bottom-[0.9rem] right-[150px] hidden"
+        class="scale-[0.75] absolute -bottom-[0.6rem] right-[150px] hidden"
         alt="Death Note: Light Yagami"
       />
-      <a href="/blog" class="text-[#50b1d2] font-bold">Skills</a>
+      <A
+        href="/about"
+        target="_self"
+        backgroundColor="before:bg-cyan-500"
+        class="text-[#50b1d2] font-bold">Skills</A
+      >
       and Technologies that I can Use.
     </span>
   </p>

@@ -1,5 +1,6 @@
 ---
 import lampe from "@assets/images/lampe.gif";
+import A from "@components/markdown/A.astro";
 import SectionHeading from "./SectionHeading.astro";
 ---
 
@@ -25,10 +26,15 @@ import SectionHeading from "./SectionHeading.astro";
     Awesome <span class="relative inline projects">
       <img
         src={lampe}
-        class="scale-[2] absolute bottom-16 left-0 hidden"
+        class="scale-[2] absolute bottom-[4.5rem] left-0 hidden"
         alt="Smoker Person"
       />
-      <a href="#" class="text-[#45bd7a] font-bold">Projects</a>
+      <A
+        href="/portfolio/1"
+        target="_self"
+        backgroundColor="before:bg-[#45bd7a]"
+        class="text-[#45bd7a] font-bold">Projects</A
+      >
     </span> with Various Web Technologies Like Typescript, React, Next and More.
   </p>
 </div>

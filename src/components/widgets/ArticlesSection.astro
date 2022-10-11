@@ -1,6 +1,7 @@
 ---
 import SectionHeading from "./SectionHeading.astro";
 import writingImage from "@assets/images/writing.gif";
+import A from "@components/markdown/A.astro";
 ---
 
 <div
@@ -27,7 +28,12 @@ import writingImage from "@assets/images/writing.gif";
         class="scale-50 absolute -bottom-10 right-[200px] hidden"
         alt="Death Note: Light Yagami"
       />
-      <a href="/blog" class="text-[#ff5e7d] font-bold">Articles</a>
+      <A
+        href="/blog"
+        target="_self"
+        backgroundColor="before:bg-[#ff5e7d]"
+        class="text-[#ff5e7d] font-bold">Articles</A
+      >
       in Programming specific in web development field,
     </span>
   </p>
