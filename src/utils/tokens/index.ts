@@ -120,6 +120,10 @@ const getTags = () => {
       background: "bg-black",
       color: "text-white",
     },
+    tools: {
+      background: "bg-orange-500",
+      color: "text-slate-800",
+    },
   };
 };
 
