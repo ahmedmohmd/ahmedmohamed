@@ -1,49 +1,48 @@
-# Welcome to [Astro](https://astro.build)
+# My Official Website
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+# Description
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+This is My Official Website that Contains My Projects, Articles and Skills.
 
+---
 
-## 🚀 Project Structure
+# App Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- Responsive
+- Nice Design with Tailwind Framework
+- Speed & Good Performance thanks to Astro Project
+- 100% in Google **Lighthouse**
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+---
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+# Languages & Technologies
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Languages used in this Web App:
 
-Any static assets, like images, can be placed in the `public/` directory.
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="drawing" width="48" height="48"/></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=ar"><img src="https://img.icons8.com/color/48/000000/css3.png" alt="drawing" width="48" height="48"/></a>
+  <a href="https://www.javascript.com/"><img src="https://img.icons8.com/color/48/000000/javascript--v2.png" width="48" height="48"/></a>
+</div>
 
-## 🧞 Commands
+### Technolohies that used in this App:
 
-All commands are run from the root of the project, from a terminal:
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  <a href="https://tailwindcss.com/"><img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg" width="48" height="48"/></a>
+<a href="https://www.typescriptlang.org/"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968381.png" width="48" height="48"/></a>
+<a href="https://astro.build/"><img src="https://avatars.githubusercontent.com/u/44914786?s=200&v=4" width="48" height="48"/></a>
+</div>
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+### Other Libs & Packages:
 
-## 👀 Want to learn more?
+- [**@astrojs/mdx**](https://docs.astro.build/en/guides/integrations-guide/mdx/)
+- [**@tailwindcss/line-clamp**](https://www.npmjs.com/package/@tailwindcss/line-clamp)
+- [**aos**](https://www.npmjs.com/package/aos)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+# Web App Screenshot
+
+<!-- ![My Personal Website Screenshot](https://github.com/ahmedmohmd/static-job-listings-master/blob/main/app-screenshot.png?raw=true) -->
