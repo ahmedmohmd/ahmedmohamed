@@ -124,6 +124,10 @@ const getTags = () => {
       background: "bg-orange-500",
       color: "text-slate-800",
     },
+    tailwindcss: {
+      background: "bg-[#38bdf8]",
+      color: "text-slate-800",
+    },
   };
 };
 
