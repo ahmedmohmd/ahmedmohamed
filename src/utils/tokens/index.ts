@@ -22,7 +22,7 @@ const getFooterSocialIcons = (icons: [string, string, string, string]) => {
       border: "border-[#56c2e6]/90",
     },
     {
-      icon: icons[1],
+      icon: icons[3],
       altText: "Github",
       background: "bg-[#4acf84]",
       link: "https://github.com/ahmedmohmd",
