@@ -13,7 +13,7 @@ This is My Official Website that Contains My Projects, Articles and Skills.
 - Responsive
 - Nice Design with Tailwind Framework
 - Speed & Good Performance thanks to Astro Project
-- Awesome Animations By [AOS](https://michalsnik.github.io/aos/) Library
+- Awesome Animations By [**AOS**](https://michalsnik.github.io/aos/) Library
 - 100% in Google **Lighthouse**
 
 ---
