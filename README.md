@@ -13,6 +13,7 @@ This is My Official Website that Contains My Projects, Articles and Skills.
 - Responsive
 - Nice Design with Tailwind Framework
 - Speed & Good Performance thanks to Astro Project
+- Awesome Animations By [AOS](https://michalsnik.github.io/aos/) Library
 - 100% in Google **Lighthouse**
 
 ---
@@ -45,4 +46,4 @@ This is My Official Website that Contains My Projects, Articles and Skills.
 
 # Web App Screenshot
 
-<!-- ![My Personal Website Screenshot](https://github.com/ahmedmohmd/static-job-listings-master/blob/main/app-screenshot.png?raw=true) -->
+![My Official Website Screenshot](https://github.com/ahmedmohmd/ahmedmohamed/blob/main/app-screenshot.png?raw=true)
