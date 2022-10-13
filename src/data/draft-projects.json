@@ -1,0 +1,176 @@
+[
+  {
+    "title": "Modern Landing Page",
+    "cover": "/images/projects/modern-landing-page.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/modern-landing-page",
+    "livePreviewUrl": "https://modernlandingpage.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Web Guider",
+    "cover": "/images/projects/web-guider.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/web-guider/tree/main",
+    "livePreviewUrl": "https://web-guider.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "QR App",
+    "cover": "/images/projects/qr-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/qr-app/tree/main",
+    "livePreviewUrl": "https://qr-app-peach.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Shortly",
+    "cover": "/images/projects/shortly-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/shortly",
+    "livePreviewUrl": "https://shortly-nine-beta.vercel.app/",
+    "category": "fullstack"
+  },
+  {
+    "title": "Country Finder",
+    "cover": "/images/projects/country-finder.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/country-finder",
+    "livePreviewUrl": "https://country-finder-five.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Sound Player",
+    "cover": "/images/projects/sound-player.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/py-player",
+    "livePreviewUrl": "https://sound-player.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Markdown Blog",
+    "cover": "/images/projects/markdown-blog.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/markdown-blog/tree/main",
+    "livePreviewUrl": "https://markdownblog.vercel.app/",
+    "category": "fullstack"
+  },
+  {
+    "title": "Weather App",
+    "cover": "/images/projects/weather-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/weather-app   ",
+    "livePreviewUrl": "https://weather-app-beige-nine.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Pomodoro App",
+    "cover": "/images/projects/pomodoro-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/pomodoro-app/tree/main",
+    "livePreviewUrl": "https://pomodoro-app-phi.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Calculator App",
+    "cover": "/images/projects/calculator-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/calculator-app/tree/main",
+    "livePreviewUrl": "https://calculator-six-rosy.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Time Tracking App",
+    "cover": "/images/projects/time-tracking-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/time-tracking-dashboard/tree/main",
+    "livePreviewUrl": "https://time-tracking-dashboard-seven-zeta.vercel.app/weekly",
+    "category": "frontend"
+  },
+  {
+    "title": "Quizz App",
+    "cover": "/images/projects/quizz-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/quizz-app/tree/main",
+    "livePreviewUrl": "https://quizz-app-eta.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "To Do App",
+    "cover": "/images/projects/todo-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/to-do-app",
+    "livePreviewUrl": "https://to-do-app-ashy.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Ayah Bot",
+    "cover": "/images/projects/ayah-bot.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/ayah-bot",
+    "livePreviewUrl": "https://t.me/random_ayah_bot",
+    "category": "backend"
+  },
+  {
+    "title": "Github User Search",
+    "cover": "/images/projects/github-search.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/H--GitHub-User-Search-App/tree/main",
+    "livePreviewUrl": "https://github-user-search-app-two-smoky.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Squid Game",
+    "cover": "/images/projects/squid-game.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/squid-game/tree/main",
+    "livePreviewUrl": "https://squid-game-4zseic9ey-a7m3d000.vercel.app/#/",
+    "category": "frontend"
+  },
+  {
+    "title": "Geniuses",
+    "cover": "/images/projects/geniuses.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/L--Geniuses/tree/main",
+    "livePreviewUrl": "https://geniuses.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "ClipBoard Landing Page",
+    "cover": "/images/projects/clipboard-landing-page.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/clipboard-landing-page/tree/main",
+    "livePreviewUrl": "https://clipboard-landing-page-neon.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Stripe Payments",
+    "cover": "/images/projects/stripe-payments-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/-stripe-payment-frontend/tree/main",
+    "livePreviewUrl": "https://stripe-payment-frontend.vercel.app/",
+    "category": "fullstack"
+  },
+  {
+    "title": "Sunnyside Landing Page",
+    "cover": "/images/projects/sunnyside-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/Sunnyside-Agency-Landing-Page/tree/main",
+    "livePreviewUrl": "https://sunnyside-agency-landing-page-eosin.vercel.app/#/body",
+    "category": "frontend"
+  },
+  {
+    "title": "Noah",
+    "cover": "/images/projects/noah.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/L--Noah/tree/main",
+    "livePreviewUrl": "https://noah-gamma.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Fylo",
+    "cover": "/images/projects/fylo.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/L--Fylo-Dark-Theme-Landing-Page/tree/main",
+    "livePreviewUrl": "https://fylo-dark-theme-landing-page-ivory-three.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Testimonials Slider",
+    "cover": "/images/projects/testimonials-slider.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/H--Coding-Bootcamp-Testimonials-Slider/tree/main",
+    "livePreviewUrl": "https://coding-bootcamp-testimonials-slider-swart-three.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Notes App",
+    "cover": "/images/projects/notes-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/notes-app",
+    "category": "backend"
+  },
+  {
+    "title": "Card Page",
+    "cover": "/images/projects/card-page.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/L--Card-Page/tree/main",
+    "livePreviewUrl": "https://card-page-iota.vercel.app/",
+    "category": "frontend"
+  }
+]
