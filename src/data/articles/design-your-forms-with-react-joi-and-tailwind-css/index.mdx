@@ -1,0 +1,480 @@
+---
+title: "Design Your Forms With React Joi and TailwindCSS"
+slug: "design-your-forms-with-react-joi-and-tailwind-css"
+excerpt: "Froms considers one of the most complicated component in web development because it is have some complicated details so in this articl ewe will see how we can make simple form with tailwindcss and joi."
+date: "2022-07-01"
+cover: "/images/articles/design-your-forms-with-react-joi-and-tailwind-css.jpg"
+tags: "tailwindcss"
+---
+
+{/* Components */}
+import TopicLink from "@components/markdown/TopicLink.astro"
+import Ul from "@components/markdown/Ul.astro"
+import A from "@components/markdown/A.astro"
+import Image from "@components/markdown/Image.astro"
+import B from "@components/markdown/B.astro"
+
+import finalResultImage from "./images/final-form-result.gif";
+
+{/* Content */}
+
+## Introduction
+
+One of the important things in the Forms Handling Process in Your Frontend App is that be sure that all of the data is true before sending it into the backend but the Form validation process, is a little hard and contains a lot of details that you should repeat it in every project that you need to validate forms data in it.
+So to solve this problem we see tens of packages that are used to handle or solve this problem and one of these packages is Joi.
+Joi is a package that use to validate forms data that use it in your front-end projects.
+And in this article we will design a simple login form with <A href="https://reactjs.org/">react</A> and <A href="https://tailwindcss.com/">tailwind</A> and <A href="https://joi.dev/">Joi</A>, so let's get started...👉
+
+## Contents:
+
+<TopicLink href="#introduction" topic="Introduction" />
+<TopicLink
+  href="#initialize-project-and-install-dependencies"
+  topic="Initialize project and install Dependencies"
+/>
+<TopicLink
+  href="#create-jsx-and-form-styles"
+  topic="Create JSX and Form Styles"
+/>
+<TopicLink
+  href="#handle-inputs-and-form-submitting"
+  topic="Handle Inputs and Form Submitting"
+/>
+<TopicLink
+  href="#validate-form-data-by-joi"
+  topic="Validate Form Data by Joi"
+/>
+<TopicLink href="#conclusion" topic="Conclusion" />
+
+---
+
+## Initialize project and install Dependencies
+
+First clone the following <A href="https://github.com/ahmedmohmd/login-form">Repo</A> in your machine by the typing the following command in your terminal:
+
+```bash
+git clone https://github.com/ahmedmohmd/login-form
+
+```
+
+Now our project has the following structure:
+
+```bash
+|
+├── public
+│   └── index.html
+├── README.md
+├── src
+│   ├── App.js
+│   ├── components
+│   │   └── LoginForm.jsx
+│   ├── index.css
+│   ├── index.js
+│   └── utils
+│       └── formValidate.js
+└── tailwind.config.js
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+└── .gitignore
+```
+
+Now we will install project Dependencies by typing the following command in Terminal:
+
+```bash
+npm i
+
+```
+
+## Create <B>JSX</B> and Form Styles
+
+Now we can say that we are ready to make our Nice Form, first, we will create <B>JSX</B> and styles of the form.
+Go to <B>LoginForm.jsx</B> and type the following code:
+
+LoginForm.jsx:
+
+```javascript
+function LoginForm() {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-wi-500 min-w-screen">
+      <div className="container flex items-center justify-center p-3 mx-auto">
+        <form className="flex flex-col items-center justify-center w-full gap-10 px-5 py-5 shadow-xl rounded-2xl sm:w-1/3">
+          <div class="w-full flex flex-col justify-center items-stretch gap-2">
+            <label for="email" class="block font-medium text-gray-900 ">
+              <span class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">
+                Email
+              </span>
+            </label>
+            <input
+              type="email"
+              class="placeholder:text-slate-400 placeholder:font-bold outline-none bg-gray-50 border border-gray-300 text-slate-500 font-bold text-md rounded-xl block w-full p-2.5"
+              placeholder="john.doe@company.com"
+            />
+          </div>
+          <div class="w-full flex flex-col justify-center items-stretch gap-2">
+            <label for="email" class="block font-medium text-gray-900 ">
+              <span class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">
+                Password
+              </span>
+            </label>
+            <input
+              type="password"
+              class="placeholder:text-slate-400 placeholder:font-bold outline-none bg-gray-50 border border-gray-300 text-slate-500 font-bold text-md rounded-xl block w-full p-2.5"
+              placeholder="•••••••••"
+            />
+          </div>
+          <button
+            type="submit"
+            class="text-white bg-blue-500 hover:bg-blue/80 justify-center gap-2 focus:ring-4 focus:outline-none focus:ring-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 mr-2 mb-2"
+          >
+            <span>Send</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13 5l7 7-7 7M5 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+```
+
+## Handle Inputs and Form Submitting
+
+After building <B>JSX</B> and styles of our Component, we will handle input values and events.
+
+LoginForm.jsx:
+
+```javascript
+function LoginForm() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-wi-500 min-w-screen">
+      <form onSubmit={handleSubmit}>
+        //* Email Input
+        <input
+          onChange={(event) => {
+            setFormData({ ...formData, email: event.target.value });
+          }}
+        />
+        //* Password Input
+        <input
+          onChange={(event) => {
+            setFormData({ ...formData, password: event.target.value });
+          }}
+        />
+      </form>
+    </div>
+  );
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(JSON.stringify(formData));
+  }
+}
+```
+
+In the above code, we put an <B>onClick</B> event on every input and listen to any change in inputs values like typing and then assign it in keys (email, password) in the <B>formData</B> State.
+
+After handling changes in inputs values we make an <B>onSubmit</B> event on the form to handle Submit process.
+First, we prevent the default behavior of submitting the form by typing <B>event.preventDefault()</B>, and then we log <B>formData</B> as JSON data in console.
+
+## Validate Form Data by Joi
+
+formValidate.js:
+
+```javascript
+//* Form Validate Function
+const formValidate = (formData, schema) => {
+  const errors = {};
+  const options = { abortEarly: false };
+  const { error } = schema.validate(formData, options);
+
+  if (!error) return null;
+
+  if (error)
+    for (let item of error.details) {
+      errors[item.path[0]] = item.message;
+    }
+
+  return errors;
+};
+
+export { formValidate };
+```
+
+LoginForm.jsx:
+
+```javascript
+const loginFormSchema = Joi.object({
+  email: Joi.string()
+    .email({
+      tlds: { allow: ["com"] },
+    })
+    .required(),
+  password: Joi.string().min(4).max(8).required(),
+});
+
+function LoginForm() {
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+  });
+
+  return (
+    <div>
+      <form>
+        //* Email Input
+        <input type="password" placeholder="•••••••••" />
+        {errors.email ? (
+          <div
+            class="flex p-4 text-sm text-white bg-red-400 rounded-lg dark:bg-red-200"
+            role="alert"
+          >
+            <svg
+              class="inline flex-shrink-0 mr-3 w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <div>{errors.email}</div>
+          </div>
+        ) : null}
+        //* Password Input
+        <input type="email" placeholder="john.doe@company.com" />
+        {errors.password ? (
+          <div
+            class="flex p-4 text-sm text-white bg-red-400 rounded-lg dark:bg-red-200"
+            role="alert"
+          >
+            <svg
+              class="inline flex-shrink-0 mr-3 w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <div>{errors.password}</div>
+          </div>
+        ) : null}
+      </form>
+    </div>
+  );
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const errorsResult = formValidate(formData, loginFormSchema);
+
+    if (errorsResult) {
+      setErrors(errorsResult);
+    } else {
+      setErrors({});
+      console.log(JSON.stringify(formData));
+    }
+  }
+}
+```
+
+<Ul
+  items={[
+    "First we import the formValidate function in the LoginForm component. this function takes two arguments:",
+  ]}
+/>
+<div class="ml-4">
+  <Ul items={["formData", "schema"]} />
+</div>
+
+and return error Object that contains our inputs Error if it is found.
+
+<Ul
+  items={[
+    "Then we will import Joi into our Component and define the Joi schema that the job will compare with our form data.",
+    "We will make a state that will contain form data errors object.",
+    "Then at submitting handler we will check if there are errors or not and update errors to state according to it.",
+    "finally we will show danger alerts below each input if there are errors.",
+  ]}
+/>
+
+And this is the final code:
+
+LoginForm.jsx:
+
+```javascript
+import { useState } from "react";
+import Joi, { required } from "joi";
+import { formValidate } from "../utils/formValidate";
+
+const loginFormSchema = Joi.object({
+  email: Joi.string()
+    .email({
+      tlds: { allow: ["com"] },
+    })
+    .required(),
+  password: Joi.string().min(4).max(8).required(),
+});
+
+function LoginForm() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+  });
+
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-wi-500 min-w-screen">
+      <div className="container flex items-center justify-center p-3 mx-auto">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center justify-center w-full gap-10 px-5 py-5 shadow-xl rounded-2xl sm:w-1/3"
+        >
+          <div class="w-full flex flex-col justify-center items-stretch gap-2">
+            <label for="email" class="block font-medium text-gray-900 ">
+              <span class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">
+                Email
+              </span>
+            </label>
+            <input
+              type="email"
+              class="placeholder:text-slate-400 placeholder:font-bold outline-none bg-gray-50 border border-gray-300 text-slate-500 font-bold text-md rounded-xl block w-full p-2.5"
+              placeholder="john.doe@company.com"
+              onChange={(event) => {
+                setFormData({ ...formData, email: event.target.value });
+              }}
+            />
+            {errors.email ? (
+              <div
+                class="flex p-4 text-sm text-white bg-red-400 rounded-lg dark:bg-red-200"
+                role="alert"
+              >
+                <svg
+                  class="inline flex-shrink-0 mr-3 w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <div>{errors.email}</div>
+              </div>
+            ) : null}
+          </div>
+          <div class="w-full flex flex-col justify-center items-stretch gap-2">
+            <label for="email" class="block font-medium text-gray-900 ">
+              <span class="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">
+                Password
+              </span>
+            </label>
+            <input
+              type="password"
+              class="placeholder:text-slate-400 placeholder:font-bold outline-none bg-gray-50 border border-gray-300 text-slate-500 font-bold text-md rounded-xl block w-full p-2.5"
+              placeholder="•••••••••"
+              onChange={(event) => {
+                setFormData({ ...formData, password: event.target.value });
+              }}
+            />
+            {errors.password ? (
+              <div
+                class="flex p-4 text-sm text-white bg-red-400 rounded-lg dark:bg-red-200"
+                role="alert"
+              >
+                <svg
+                  class="inline flex-shrink-0 mr-3 w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <div>{errors.password}</div>
+              </div>
+            ) : null}
+          </div>
+          <button
+            type="submit"
+            class="text-white bg-blue-500 hover:bg-blue/80 justify-center gap-2 focus:ring-4 focus:outline-none focus:ring-blue-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 mr-2 mb-2"
+          >
+            <span>Send</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13 5l7 7-7 7M5 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const errorsResult = formValidate(formData, loginFormSchema);
+
+    if (errorsResult) {
+      setErrors(errorsResult);
+    } else {
+      setErrors({});
+      console.log(JSON.stringify(formData));
+    }
+  }
+}
+
+export default LoginForm;
+```
+
+And finally result will be like this:
+
+<Image src={finalResultImage} alt="Form Component" />
+
+---
+
+## Conclusion
+
+After reading this article you should take a look at the Joi package and how it can be easier from the validation process, there are a lot of other packages like Joi you can use, but the principle is the same.
+I hope that this article helps you, thanks for reading, and see you in the next article...🖐️​

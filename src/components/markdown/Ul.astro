@@ -3,11 +3,15 @@ import Li from "./Li.astro";
 
 interface Props {
   items: string[];
-  textColor: string;
-  iconsColor: string;
+  textColor?: string;
+  iconsColor?: string;
 }
 
-const { items, textColor, iconsColor } = Astro.props;
+const {
+  items,
+  textColor = "text-white",
+  iconsColor = "bg-orange-500",
+} = Astro.props;
 ---
 
 <ul class="ml-4 my-2 flex justify-center items-start gap-2 flex-col">
