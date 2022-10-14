@@ -19,5 +19,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/ytl-downloader",
     "livePreviewUrl": "https://y-t-downloader.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Web Guider",
+    "cover": "/images/projects/web-guider.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/web-guider/tree/main",
+    "livePreviewUrl": "https://web-guider.vercel.app/",
+    "category": "frontend"
   }
 ]
