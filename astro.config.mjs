@@ -1,8 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-const ayuMirage = shiki.loadTheme(
-  "./node_modules/shiki/themes/ayu-mirage.json"
-);
+
 
 import mdx from "@astrojs/mdx";
 
