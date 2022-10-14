@@ -1,3 +1,4 @@
+// Footers Icons
 const getFooterSocialIcons = (icons: [string, string, string, string]) => {
   return [
     {
@@ -31,6 +32,7 @@ const getFooterSocialIcons = (icons: [string, string, string, string]) => {
   ];
 };
 
+// Skills
 const getSkills = () => {
   return [
     {
@@ -106,6 +108,7 @@ const getSkills = () => {
   ];
 };
 
+// Tags
 const getTags = () => {
   return {
     reactjs: {
