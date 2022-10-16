@@ -33,11 +33,12 @@ const tagss = getTags();
       {
         tags.map((tag) => {
           return (
-            <span
-              class={`${tagss[tag]["background"]} ${tagss[tag]["color"]}  text-xs font-semibold mr-2 px-2.5 py-0.5 rounded `}
-            >
+            <a
+              class={`${tagss[tag]["background"]} ${tagss[tag]["color"]}  text-xs font-semibold mr-2 px-2.5 py-0.5 rounded hover:font-bold duration-300 hover:line-through`}
+              href={`/blog/${tag}`}
+              >
               #{tag}
-            </span>
+            </a>
           );
         })
       }
