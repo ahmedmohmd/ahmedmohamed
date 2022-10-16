@@ -33,5 +33,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/modern-landing-page",
     "livePreviewUrl": "https://modernlandingpage.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "IP Address Tracker",
+    "cover": "/images/projects/ip-address-tracker.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/ip-address-tracker",
+    "livePreviewUrl": "https://whereiam.vercel.app/",
+    "category": "frontend"
   }
 ]
