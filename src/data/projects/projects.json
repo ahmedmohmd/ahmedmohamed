@@ -26,5 +26,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/web-guider/tree/main",
     "livePreviewUrl": "https://web-guider.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Modern Landing Page",
+    "cover": "/images/projects/modern-landing-page.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/modern-landing-page",
+    "livePreviewUrl": "https://modernlandingpage.vercel.app/",
+    "category": "frontend"
   }
 ]
