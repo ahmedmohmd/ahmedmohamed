@@ -40,5 +40,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/ip-address-tracker",
     "livePreviewUrl": "https://whereiam.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "QR App",
+    "cover": "/images/projects/qr-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/qr-app/tree/main",
+    "livePreviewUrl": "https://qr-app-peach.vercel.app/",
+    "category": "frontend"
   }
 ]
