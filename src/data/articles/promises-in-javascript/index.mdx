@@ -1,0 +1,198 @@
+---
+title: "Promises in JavaScript"
+slug: "promises-in-javascript"
+excerpt: "Promises one of the main concepts in JvaScript that every programmer should know, So in this Article we will cover Promises in JavaScript in Details."
+date: "2022-06-17"
+cover: "/images/articles/promises-in-javascript.jpg"
+tags: "javascript"
+---
+
+{/* Components */}
+import TopicLink from "@components/markdown/TopicLink.astro"
+import Ul from "@components/markdown/Ul.astro"
+import B from "@components/markdown/B.astro"
+import Image from "@components/markdown/Image.astro"
+
+import thinkerPersonImage from "./images/thinker-person.gif";
+import easyImage from "./images/easy.gif";
+
+{/* Content */}
+
+## Introduction
+
+Before <B>ECMA Script 6</B> we were using <B>Callback Functions</B> to handle Asynchronous Operations but with this method we faced some of big problems so ES6 gave us new Concept called <B>Promises</B> and after that, all game is changed.
+But wait a minute, what are promises? and how can I use it? we will answer all of these questions in this article.
+
+<Image src={thinkerPersonImage} alt="Thinker Person" />
+
+## Contents
+
+<TopicLink href="#introduction" topic="Introduction" />
+<TopicLink
+  href="#what-is-callback-function"
+  topic="What is Callback Function?"
+/>
+<TopicLink href="#what-is-promises" topic="What is Promises" />
+<TopicLink href="#async-and-await-syntax" topic="async and await Syntax" />
+<TopicLink href="#conclusion" topic="Conclusion" />
+
+---
+
+## What is Callback Function
+
+Callback Function is a function passed to another function to be invoked when the asynchronous operation completes.
+
+<B>setTimeout()</B> and <B>setEnterval()</B> is an Example of Callback Functions.
+
+To simplify Callback Function Definition, Let's take an example with the <B>setTimeout()</B> Function.
+
+```javascript
+//* Callback Function
+function sayHello() {
+  console.log("Hello, World!");
+}
+
+setTimeout(sayHello, 1000);
+```
+
+Above Code, We used <B>setTimeout()</B> Function that get another Function <B>sayHello()</B> as a Parameter and then Executes it after a given Time <B>1 Second</B>, in This Example sayHello() Function is the Callback Function Which was Executed after 1 Second.
+
+So, the Above Example will Log <B>"Hello, World!"</B> in the Console after 1 Second.
+
+Now after Understanding Callback Function Concept let's take a More Complicated Example on setTimeout() Function.
+
+```javascript
+setTimeout(() => {
+  console.log("I"); //* after (1) second
+  setTimeout(() => {
+    console.log("Love"); //* after (3) second
+    setTimeout(() => {
+      console.log("JavaScript"); //* after (6) second
+      setTimeout(() => {
+        console.log("Very"); //* after (10) second
+        setTimeout(() => {
+          console.log("Much"); //* after (15) second
+          setTimeout(() => {
+            console.log("!"); //* after (21) second
+          }, 6000);
+        }, 5000);
+      }, 4000);
+    }, 3000);
+  }, 2000);
+}, 1000);
+```
+
+In the above example we used the setTimeout Function a lot of Times to log <B>"I Love JavaScript Very Much !"</B> Sentence but every word after a special time.
+But Did You Notice Things in This Example?
+Yes Exactly The Code shape is Not Practical, It has 6 Callback Functions, And in Large Scale Projects You will have More and More of these Nested Callback Functions.
+This Problem is Known as <B>Callback Hell</B> or <B>Pyramid of Doom</B>.
+
+## What is Promises?
+
+To Solve this Problem <B>ES6</B> gets a new Object Called <B>Promises</B>.
+To Understand the Promise Concept, Let Me and You, I give you a Promise that I Will Give You Your Book in the Next Week, This is Called a Promise.
+Now, What is the possible instances of the promise I made to you?
+Good, There is Two-State:
+
+<Ul
+  items={[
+    "I will give You Your Book and this is called Resolved State",
+    "I will not Give You Your Book and this called Rejected State",
+    "In Between Those two States, There is another State Called Pending State",
+  ]}
+/>
+
+Now Let's Take an Example of a Promise
+
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  const connect = true;
+
+  if (connect) {
+    resolve("Your Connection Success :)");
+  } else {
+    reject(new Error("Sorry, Connection Failed :("));
+  }
+});
+
+myPromise
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+  .finally(() => {
+    console.log("Process is Done :)");
+  });
+```
+
+In the above example, we use a <B>Promise Object</B> to handle a Connection Process.
+We Notice that promise have three ways to Get data from It:
+
+<Ul
+  items={[
+    "then() Function to get Response in Resolved Case.",
+    "catch() Function to get Error in Rejected Case.",
+    "finally() Function Which Excuted in all Cases.",
+  ]}
+/>
+
+The Fantastic Thing in Promise is That you Can any Numbers of <B>then()</B> Functions, Let's take an example:
+
+```javascript
+// Previous Code.....
+
+myPromise
+  .then((res) => {
+    return res;
+  })
+  .then((res) => `${res} 1`)
+  .then((res) => `${res} 2`)
+  .then((res) => `${res} 3`)
+  .then((res) => `${res} 4`)
+  .then((res) => `${res} 5`)
+  .then((res) => console.log(res))
+  .catch((error) => {
+    console.log(error);
+  })
+  .finally(() => {
+    console.log("Process is Done :)");
+  });
+```
+
+In The Above Example the Result will be Like This in Console:
+
+```bash
+> Your Connection Success :) 1 2 3 4 5
+  > Process is Done :)
+```
+
+## async and await Syntax
+
+In <B>ECMA Script 2017</B> We have a new Syntactical Suger to ease Promises Handling by using <B>async</B> and <B>await</B> Keywords.
+So if we will write the Previous Example, It will be Like This:
+
+```javascript
+const connectFunc = async () => {
+  try {
+    const res = await myPromise;
+    console.log(res);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    console.log("Process is Done :)");
+  }
+};
+```
+
+As We See, To use the async Keyword and await Method, we add async before Function that will contain Promises Handling Code, and We use the await Keyword before any Async Line, and Finally We put all of these in try-catch block.
+
+<Image src={easyImage} alt="Man say Easy" />
+
+---
+
+## Conclusion
+
+Finally, every day that passes by, there are new things that are added and other things that are Deprecated.
+So, do not forget to follow all news in the field to develop yourself and your skills.
