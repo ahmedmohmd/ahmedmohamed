@@ -47,5 +47,19 @@
     "githubUrl": "https://github.com/ahmedmohmd/qr-app/tree/main",
     "livePreviewUrl": "https://qr-app-peach.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Country Finder",
+    "cover": "/images/projects/country-finder.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/country-finder",
+    "livePreviewUrl": "https://country-finder-five.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Quizz App",
+    "cover": "/images/projects/quizz-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/quizz-app/tree/main",
+    "livePreviewUrl": "https://quizz-app-eta.vercel.app/",
+    "category": "frontend"
   }
 ]
