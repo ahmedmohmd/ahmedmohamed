@@ -82,5 +82,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/markdown-blog/tree/main",
     "livePreviewUrl": "https://markdownblog.vercel.app/",
     "category": "fullstack"
+  },
+  {
+    "title": "Time Tracking App",
+    "cover": "/images/projects/time-tracking-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/time-tracking-dashboard/tree/main",
+    "livePreviewUrl": "https://time-tracking-dashboard-seven-zeta.vercel.app/weekly",
+    "category": "frontend"
   }
 ]
