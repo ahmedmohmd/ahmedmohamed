@@ -70,6 +70,13 @@
     "category": "fullstack"
   },
   {
+    "title": "My Old Website",
+    "cover": "/images/projects/old-website.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/my-personal-website",
+    "livePreviewUrl": "https://ahmedmohamed.vercel.app/",
+    "category": "fullstack"
+  },
+  {
     "title": "Sound Player",
     "cover": "/images/projects/sound-player.jpg",
     "githubUrl": "https://github.com/ahmedmohmd/py-player",
