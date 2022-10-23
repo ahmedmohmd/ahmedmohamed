@@ -96,5 +96,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/time-tracking-dashboard/tree/main",
     "livePreviewUrl": "https://time-tracking-dashboard-seven-zeta.vercel.app/weekly",
     "category": "frontend"
+  },
+  {
+    "title": "Github User Finder",
+    "cover": "/images/projects/github-user-finder.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/github-user-finder",
+    "livePreviewUrl": "https://github-account-finder.vercel.app/",
+    "category": "frontend"
   }
 ]
