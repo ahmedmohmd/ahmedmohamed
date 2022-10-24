@@ -103,5 +103,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/github-user-finder",
     "livePreviewUrl": "https://github-account-finder.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Stripe Payments",
+    "cover": "/images/projects/stripe-payments.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/stripe-payments",
+    "livePreviewUrl": "https://strip3-payments.vercel.app/",
+    "category": "fullstack"
   }
 ]
