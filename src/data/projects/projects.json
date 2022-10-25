@@ -110,5 +110,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/stripe-payments",
     "livePreviewUrl": "https://strip3-payments.vercel.app/",
     "category": "fullstack"
+  },
+  {
+    "title": "Pomodoro Timer",
+    "cover": "/images/projects/pomodoro-timer.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/pomodoro-app",
+    "livePreviewUrl": "https://pomodorotimerapp.vercel.app/",
+    "category": "frontend"
   }
 ]
