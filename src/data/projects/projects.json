@@ -124,5 +124,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/calculator-app",
     "livePreviewUrl": "https://calculator-a.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Weather App",
+    "cover": "/images/projects/weather-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/weather-app",
+    "livePreviewUrl": "https://weather-a.vercel.app/",
+    "category": "frontend"
   }
 ]
