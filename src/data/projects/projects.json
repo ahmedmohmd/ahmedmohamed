@@ -138,5 +138,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/to-do-app",
     "livePreviewUrl": "https://todolist-a.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Squid Game",
+    "cover": "/images/projects/squid-game.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/squid-game",
+    "livePreviewUrl": "https://squid-g3me.vercel.app/#/",
+    "category": "frontend"
   }
 ]
