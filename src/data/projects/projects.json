@@ -117,5 +117,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/pomodoro-app",
     "livePreviewUrl": "https://pomodorotimerapp.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Calculator App",
+    "cover": "/images/projects/calculator-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/calculator-app",
+    "livePreviewUrl": "https://calculator-a.vercel.app/",
+    "category": "frontend"
   }
 ]
