@@ -145,5 +145,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/squid-game",
     "livePreviewUrl": "https://squid-g3me.vercel.app/#/",
     "category": "frontend"
+  },
+  {
+    "title": "Sunnyside",
+    "cover": "/images/projects/sunnyside-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/sunnyside",
+    "livePreviewUrl": "https://sunnysidew.vercel.app/#/",
+    "category": "frontend"
   }
 ]
