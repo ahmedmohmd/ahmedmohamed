@@ -75,6 +75,12 @@ const { title, description } = Astro.props as Props;
     import "aos/dist/aos.css";
     AOS.init();
 
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then(() => console.log("Server Worker Registered :)"));
+    }
+
     const myName = `
 ░█████╗░██╗░░██╗███╗░░░███╗███████╗██████╗░
 ██╔══██╗██║░░██║████╗░████║██╔════╝██╔══██╗
