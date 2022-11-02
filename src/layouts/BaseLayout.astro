@@ -3,6 +3,7 @@ import STTButton from "@components/atoms/STTButton.astro";
 import Footer from "@components/widgets/Footer.astro";
 import NavBar from "@components/widgets/NavBar.astro";
 import tabIcon from "../../public/images/logo.png";
+// import manifestFile from "../../public/manifest.json";
 
 export interface Props {
   title: string;
@@ -31,6 +32,8 @@ const { title, description } = Astro.props as Props;
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&family=Silkscreen:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
     <main

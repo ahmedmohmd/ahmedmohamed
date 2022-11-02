@@ -1,0 +1,45 @@
+{
+  "name": "Ahmed Mohamed",
+  "short_name": "Ahmed Mohamed",
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#12181b",
+  "theme_color": "#12181b",
+  "description": "Nice Projects, Awesome Articles and More in My Offecial Website, So Follow Me Now.",
+  "dir": "ltr",
+  "lang": "en-US",
+  "oriantation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/app-icon-48px.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/app-icon-72px.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/app-icon-96px.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/app-icon-144px.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/app-icon-168px.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/app-icon-192px.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
