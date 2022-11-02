@@ -1,10 +1,11 @@
 {
+  "name": "",
   "short_name": "Ahmed Mohamed",
   "start_url": "/index.html",
   "scope": ".",
   "display": "standalone",
-  "background_color": "#12181b",
-  "theme_color": "#fff",
+  "background_color": "#fff",
+  "theme_color": "#12181b",
   "description": "Nice Projects, Awesome Articles and More in My Offecial Website, So Follow Me Now.",
   "dir": "ltr",
   "lang": "en-US",
