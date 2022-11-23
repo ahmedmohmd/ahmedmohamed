@@ -1,13 +1,15 @@
+// Caches Names
 const STATIC_CACHE_NAME = "static-cache";
 const DYNAMIC_CACHE_NAME = "dynamic_cache";
 
+// Cache Assets
 const cacheStatics = [
   "./index.html",
   "./images/logo.png",
-  "",
   "https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&family=Silkscreen:wght@400;700&display=swap",
 ];
 
+// Service Worker Events
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE_NAME).then((cache) => {
@@ -17,7 +19,15 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  console.log("App Activated");
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      keys
+        .filter(
+          (key) => key !== STATIC_CACHE_NAME || key !== DYNAMIC_CACHE_NAME
+        )
+        .map((key) => caches.delete(key));
+    })
+  );
 });
 
 self.addEventListener("fetch", (event) => {
