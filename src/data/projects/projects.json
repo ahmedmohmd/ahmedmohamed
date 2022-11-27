@@ -152,5 +152,19 @@
     "githubUrl": "https://github.com/ahmedmohmd/sunnyside",
     "livePreviewUrl": "https://sunnysidew.vercel.app/#/",
     "category": "frontend"
+  },
+  {
+    "title": "ClipBoard Landing Page",
+    "cover": "/images/projects/clipboard-landing-page.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/clipboard-landing-page",
+    "livePreviewUrl": "https://clipboardlp.vercel.app/",
+    "category": "frontend"
+  },
+  {
+    "title": "Testimonials Slider",
+    "cover": "/images/projects/testimonials-slider.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/testimonials-slider",
+    "livePreviewUrl": "https://testimonials-p.vercel.app/",
+    "category": "frontend"
   }
 ]
