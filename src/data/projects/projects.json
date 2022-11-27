@@ -166,5 +166,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/testimonials-slider",
     "livePreviewUrl": "https://testimonials-p.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Fylo Landing Page",
+    "cover": "/images/projects/fylo.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/fylo-ladning-page",
+    "livePreviewUrl": "https://fylo-landing-p.vercel.app/",
+    "category": "frontend"
   }
 ]

@@ -153,13 +153,7 @@
     "livePreviewUrl": "https://fylo-dark-theme-landing-page-ivory-three.vercel.app/",
     "category": "frontend"
   },
-  {
-    "title": "Testimonials Slider",
-    "cover": "/images/projects/testimonials-slider.jpg",
-    "githubUrl": "https://github.com/ahmedmohmd/H--Coding-Bootcamp-Testimonials-Slider/tree/main",
-    "livePreviewUrl": "https://coding-bootcamp-testimonials-slider-swart-three.vercel.app/",
-    "category": "frontend"
-  },
+
   {
     "title": "Notes App",
     "cover": "/images/projects/notes-app.jpg",
