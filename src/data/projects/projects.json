@@ -180,5 +180,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/faq-accordion-card",
     "livePreviewUrl": "https://faqaccordion.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Geniuses",
+    "cover": "/images/projects/geniuses.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/geniuses",
+    "livePreviewUrl": "https://geniuses.vercel.app/",
+    "category": "frontend"
   }
 ]
