@@ -191,8 +191,8 @@
   {
     "title": "Card Page",
     "cover": "/images/projects/card-page.jpg",
-    "githubUrl": "https://github.com/ahmedmohmd/L--Card-Page/tree/main",
-    "livePreviewUrl": "https://card-page-iota.vercel.app/",
+    "githubUrl": "https://github.com/ahmedmohmd/card-page",
+    "livePreviewUrl": "https://card-p.vercel.app/",
     "category": "frontend"
   }
 ]
