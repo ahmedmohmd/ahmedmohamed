@@ -173,5 +173,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/fylo-ladning-page",
     "livePreviewUrl": "https://fylo-landing-p.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Faq Accordion",
+    "cover": "/images/projects/faq-accordion.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/faq-accordion-card",
+    "livePreviewUrl": "https://faqaccordion.vercel.app/",
+    "category": "frontend"
   }
 ]
