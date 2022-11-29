@@ -9,6 +9,16 @@ const cacheStatics = [
   "https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&family=Silkscreen:wght@400;700&display=swap",
 ];
 
+const resizeCache = (name, size) => {
+  caches.open(name).then((cache) => {
+    cache.keys().then((keys) => {
+      if (keys.length > size) {
+        cache.delete(keys[0]).then(resizeCache(name, size));
+      }
+    });
+  });
+};
+
 // Service Worker Events
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -38,6 +48,7 @@ self.addEventListener("fetch", (event) => {
         fetch(event.request).then((cacheRes) => {
           return caches.open(DYNAMIC_CACHE_NAME).then((cache) => {
             cache.put(event.request.url, cacheRes.clone());
+            resizeCache(DYNAMIC_CACHE_NAME, 25);
             return cacheRes;
           });
         })
