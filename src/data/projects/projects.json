@@ -187,5 +187,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/geniuses",
     "livePreviewUrl": "https://geniuses.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Card Page",
+    "cover": "/images/projects/card-page.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/L--Card-Page/tree/main",
+    "livePreviewUrl": "https://card-page-iota.vercel.app/",
+    "category": "frontend"
   }
 ]
