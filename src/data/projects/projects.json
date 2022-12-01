@@ -1,5 +1,12 @@
 [
   {
+    "title": "Markdown Editor",
+    "cover": "/images/projects/markdown-editor.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/markdown-editor",
+    "livePreviewUrl": "https://markdown-e.vercel.app/",
+    "category": "frontend"
+  },
+  {
     "title": "Static Job listings Master",
     "cover": "/images/projects/static-job-listings-master.jpg",
     "githubUrl": "https://github.com/ahmedmohmd/static-job-listings-master",
