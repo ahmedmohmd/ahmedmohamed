@@ -201,5 +201,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/card-page",
     "livePreviewUrl": "https://card-p.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "Noah",
+    "cover": "/images/projects/noah.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/noah",
+    "livePreviewUrl": "https://no3h.vercel.app/",
+    "category": "frontend"
   }
 ]
