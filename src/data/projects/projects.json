@@ -208,5 +208,12 @@
     "githubUrl": "https://github.com/ahmedmohmd/noah",
     "livePreviewUrl": "https://no3h.vercel.app/",
     "category": "frontend"
+  },
+  {
+    "title": "The Coder",
+    "cover": "/images/projects/the-coder.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/the-coder",
+    "livePreviewUrl": "https://cod3r.vercel.app/",
+    "category": "frontend"
   }
 ]
