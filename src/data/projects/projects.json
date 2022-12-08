@@ -1,5 +1,12 @@
 [
   {
+    "title": "Events App",
+    "cover": "/images/projects/events-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/events-app",
+    "livePreviewUrl": "https://ev3nts.vercel.app/",
+    "category": "frontend"
+  },
+  {
     "title": "Markdown Editor",
     "cover": "/images/projects/markdown-editor.jpg",
     "githubUrl": "https://github.com/ahmedmohmd/markdown-editor",
