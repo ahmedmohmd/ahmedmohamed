@@ -1,5 +1,12 @@
 [
   {
+    "title": "Dectionary App",
+    "cover": "/images/projects/dectionary-app.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/dectionary-app",
+    "livePreviewUrl": "https://dectionary-app.vercel.app/",
+    "category": "frontend"
+  },
+  {
     "title": "Events App",
     "cover": "/images/projects/events-app.jpg",
     "githubUrl": "https://github.com/ahmedmohmd/events-app",
