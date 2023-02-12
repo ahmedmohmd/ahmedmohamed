@@ -1,5 +1,12 @@
 [
   {
+    "title": "Password Generator",
+    "cover": "/images/projects/password-generator.jpg",
+    "githubUrl": "https://github.com/ahmedmohmd/password-generator",
+    "livePreviewUrl": "https://p3ssword-generator.vercel.app/",
+    "category": "frontend"
+  },
+  {
     "title": "Dectionary App",
     "cover": "/images/projects/dectionary-app.jpg",
     "githubUrl": "https://github.com/ahmedmohmd/dectionary-app",
