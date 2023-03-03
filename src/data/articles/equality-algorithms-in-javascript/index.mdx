@@ -1,0 +1,180 @@
+---
+title: "Equality Algorithms in JavaScript"
+slug: "equality-algorithms-in-javascript"
+excerpt: "Know how to use equality algorithms in JavaScript as a Professional"
+date: "2023-03-03"
+cover: "/images/articles/equality-algorithms-in-javascript.jpg"
+tags: "javascript"
+---
+
+{/* Components */}
+import Note from "@components/markdown/Note.astro"
+import TopicLink from "@components/markdown/TopicLink.astro"
+import Ul from "@components/markdown/Ul.astro"
+import A from "@components/markdown/A.astro"
+import B from "@components/markdown/B.astro"
+
+## Contents
+
+<TopicLink href="#introduction" topic="Introduction" />
+<TopicLink
+  href="#what-are-equality-algorithms"
+  topic="What are Equality Algorithms"
+/>
+<TopicLink
+  href="#loosley-equality-algorithm"
+  topic="Loosley Equality Algorithm ( == )"
+/>
+<TopicLink
+  href="#strict-equality-algorithm"
+  topic="Strict Equality Algorithm ( === )"
+/>
+<TopicLink
+  href="#same-value-equality-algorithm"
+  topic="Same Value Equality Algorithm"
+/>
+<TopicLink
+  href="#same-value-zero-equality-algorithm"
+  topic="Same Value Zero Equality Algorithm"
+/>
+<TopicLink href="#conclusion" topic="Conclusion" />
+
+---
+
+{/* Content */}
+
+## Introduction
+
+In this article, we will know what is Equality Algorithms and How we can use them in JavaScript.
+So let's get started... 👉
+
+---
+
+## What are Equality Algorithms
+
+Equality Algorithms are the Techniques that JavaScript uses to check if the First value equals the Second Value.
+
+So now we know what Equality Algorithms know let us know how to use them.
+
+There are four algorithms to check equality in JavaScript:
+
+<Ul
+  items={[
+    "Loosley Equality Algorithm ( == )",
+    "Strict Equality Algorithm ( === )",
+    "Same Value Equality Algorithm ( Object.is() )",
+    "Same Value Zero",
+  ]}
+/>
+
+## Loosely Equality Algorithm ( == )
+
+```javascript
+console.log("1" == 1); // true
+console.log(false == 0); // true
+```
+
+Look at the above code, We can see that the result is true although the data types of each one are different so what is going on here?
+
+The secret in the <B> == </B> operator, when you check the equality of two different types in JavaScript
+this operator automatically converts one of the two values and then compares them and this is what call Implicit <A href="https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion" >Type Coercion</A>.
+
+So the <B> == </B> equality operator makes Type Coercion in we use it and Because of this,
+we called it <B>Loosely Equality Operator</B>.
+
+## Strict Equality Algorithm ( === )
+
+This Equality Parameter behaves like the previous one, The Only Difference is that
+it doesn't make any type of conversion in the values so it gives you the exact thing
+that you want and because of this, you should use this Equality Parameter instead of Loosly Equality Parameter.
+So if we repeat the previous example with === Parameter this will be the result:
+
+```javascript
+console.log("1" === 1); // false
+console.log(false === 0); // false
+
+console.log(1 === 1); // true
+console.log(false === false); // true
+```
+
+## Strict Equality Algorithm ( === )
+
+Same Value Equality Algorithm
+In JavaScript that let you check if the First Value is the same Other Value.
+
+But Wait…Is not <B> === </B> Operator do the same thing
+
+Are You Sure?? Let us see the following example first:
+
+```javascript
+console.log(NaN === NaN); // false
+```
+
+What Happened here is that <B>NaN</B> cannot be compared to another <B>NaN</B> in
+JavaScript so <B>Object.is()</B> Solved this Problem.
+
+It checks if the First value if it has the same value as the Second value.
+
+So if We Repeated the previous example with <B>Object.is()</B> we will get the desirable Results
+
+```javascript
+console.log(NaN === NaN); // true
+```
+
+But keep in your mind these exceptions for using It :
+
+```javascript
+Object.is(-0, +0); // false
+console.log(-0 === +0); //true
+
+// ---
+
+Object.is(NaN, NaN); // true
+console.log(NaN === NaN); // false
+
+// ---
+
+const obj1 = { name: "Ahmed", age: 22 };
+const obj2 = { name: "Ahmed", age: 22 };
+
+console.log(Object.is(obj1, obj2)); // false
+console.log(obj1 === obj2); // false
+
+/* 
+      In this example two methods gave the same result but there are different
+      in there tichneeques:
+
+      [1] === when compare Objects checks if the two Objects refer to the same Reference
+      [2] Object.is() when compare Objects checks if the two Objects have the same values
+*/
+```
+
+Strict Equality Operator is widely used but there are situations that
+the <B>Object.is()</B> method can help you will like checking if the coming number is
+positive or Negative Zero and so On.
+
+## Same Value Zero Equality Algorithm
+
+Algorithm’s Name explains itself, this algorithm is identical to the previous one
+except that <B>+0</B> and <B> -0</B> or **NaN **values are considered the same, So let us implement it:
+
+```javascript
+function sameValueZero(x, y) {
+  if (typeof x === "number" && typeof y === "number") {
+    // x and y are equal (may be -0 and 0) or they are both NaN
+    return x === y || (x !== x && y !== y);
+  }
+  return x === y;
+}
+```
+
+---
+
+## Conclusion
+
+To summarise the article. You shouldn’t use <B>loosely equality</B> instead of it you can use <B>strict equality</B>.
+
+You can use the same value or same zero value algorithms in case you need to do
+specific tasks like checking if the accepted value is <B>+0</B> or <B> -0 </B> …etc
+
+I hope you enjoyed this article and benefited even by 1 percent finally see you in the next article…👋

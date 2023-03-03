@@ -2,10 +2,17 @@
 import ArticleCard from "@components/core/ArticleCard.astro";
 import SectionHeading from "@components/widgets/SectionHeading.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
+// import { log } from "astro/dist/core/logger/core";
 
 export async function getStaticPaths({ paginate }) {
   const articles = await Astro.glob("../../data/articles/**/*.mdx");
   const nonDraftArticles = articles.filter((post) => !post.frontmatter.draft);
+
+  nonDraftArticles.sort((a, b) => {
+    const first: any = new Date(a.frontmatter.date);
+    const second: any = new Date(b.frontmatter.date);
+    return first - second;
+  });
 
   return paginate(nonDraftArticles, { pageSize: 12 });
 }

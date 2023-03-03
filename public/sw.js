@@ -31,11 +31,13 @@ self.addEventListener("install", (event) => {
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
-      keys
-        .filter(
-          (key) => key !== STATIC_CACHE_NAME || key !== DYNAMIC_CACHE_NAME
-        )
-        .map((key) => caches.delete(key));
+      Promise.all(
+        keys
+          .filter(
+            (key) => key !== STATIC_CACHE_NAME || key !== DYNAMIC_CACHE_NAME
+          )
+          .map((key) => caches.delete(key))
+      );
     })
   );
 });

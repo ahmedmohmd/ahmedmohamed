@@ -12,6 +12,12 @@ export const getStaticPaths = async () => {
   const articles = await Astro.glob("../../data/articles/**/*.mdx");
   const nonDraftArticles = articles.filter((post) => !post.frontmatter.draft);
 
+  nonDraftArticles.sort((a, b) => {
+    const first: any = new Date(a.frontmatter.date);
+    const second: any = new Date(b.frontmatter.date);
+    return first - second;
+  });
+
   return nonDraftArticles.map((article) => {
     return {
       params: { slug: article.frontmatter.slug },
