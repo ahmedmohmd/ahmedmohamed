@@ -1,49 +1,58 @@
-# My Official Website
+## Personal Website
 
----
+## 🚀 Brief Overview
 
-# Description
+Welcome to my Official Website, a hub that showcases my projects, articles, and technical skills. Designed for both performance and aesthetics, the site features a clean, responsive layout powered by Tailwind CSS, ensuring a smooth experience across all devices. Built using Astro for lightning-fast speed and high performance, it boasts a perfect 100% score in Google Lighthouse. With seamless animations enhanced by the AOS library, the site offers a visually engaging and interactive browsing experience. Developed with TypeScript, HTML, CSS, and JavaScript, it's a perfect blend of modern web technologies and sleek design.
 
-This is My Official Website that Contains My Projects, Articles and Skills.
+## ✨ Key Features
 
----
+1. Responsive Design
+2. Awesome Design thanks to **tailwind**.
+3. Nice perfomance.
+4. Speed & Good Performance thanks to **Astro** Project.
+5. Awesome Animations By **AOS** Library.
+6. 100% in Google Lighthouse.
 
-# App Features
+## 🛠️ Tech Stack
 
-- Responsive
-- Nice Design with Tailwind Framework
-- Speed & Good Performance thanks to Astro Project
-- Awesome Animations By [**AOS**](https://michalsnik.github.io/aos/) Library
-- 100% in Google **Lighthouse**
+- **Astro** as Main Framework.
+- **Redux** as a _state manager_
+- TailwindCSS
+- TypeScript
 
----
+## 🔧 Install Instructions
 
-# Languages & Technologies
+1. Clone the repo
 
-### Languages used in this Web App:
+```bash
+    git clone https://github.com/ahmedmohmd/ahmedmohamed.git
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="drawing" width="48" height="48"/></a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=ar"><img src="https://img.icons8.com/color/48/000000/css3.png" alt="drawing" width="48" height="48"/></a>
-  <a href="https://www.javascript.com/"><img src="https://img.icons8.com/color/48/000000/javascript--v2.png" width="48" height="48"/></a>
-</div>
+```
 
-### Technolohies that used in this App:
+2. Install dependencies
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-  <a href="https://tailwindcss.com/"><img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg" width="48" height="48"/></a>
-<a href="https://www.typescriptlang.org/"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968381.png" width="48" height="48"/></a>
-<a href="https://astro.build/"><img src="https://avatars.githubusercontent.com/u/44914786?s=200&v=4" width="48" height="48"/></a>
-</div>
+```bash
+  yarn install
 
-### Other Libs & Packages:
+```
 
-- [**@astrojs/mdx**](https://docs.astro.build/en/guides/integrations-guide/mdx/)
-- [**@tailwindcss/line-clamp**](https://www.npmjs.com/package/@tailwindcss/line-clamp)
-- [**aos**](https://www.npmjs.com/package/aos)
+3. Run the App
 
----
+```bash
+  yarn run dev
 
-# Web App Screenshot
+```
+
+## 🖥️ Usage
+
+1. You can read Useful Articles.
+2. You can loo at Awesome Projects.
+3. You can Look at my Skills.
+
+## 👀 Demo
+
+[Personal Website](https://a7m3d.vercel.app/)
+
+## 🖼️ Application's Screeshots
 
 ![My Official Website Screenshot](https://github.com/ahmedmohmd/ahmedmohamed/blob/main/app-screenshot.png?raw=true)
